@@ -1,0 +1,22 @@
+uuid: 042ba1b9-462f-402e-9308-c0e32faebfa8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - themag
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: themag_primary_local_tasks
+theme: themag
+region: top_bar_first
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

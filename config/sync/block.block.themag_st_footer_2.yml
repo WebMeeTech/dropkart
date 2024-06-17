@@ -1,0 +1,27 @@
+uuid: c4d0903f-0d96-4c2a-9e72-0c13613c5b8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - themag_st
+_core:
+  default_config_hash: t7j1A_cdFMmrpwX1Bc8Wm6nqVxOF9-bbzMJkEbhpqM0
+id: themag_st_footer_2
+theme: themag_st
+region: footer_bottom_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

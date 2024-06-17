@@ -1,0 +1,23 @@
+uuid: bf383aa2-45c2-4f6e-873e-17952c6cc04f
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - themag
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: themag_search_form_wide
+theme: themag
+region: top_bar_first
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

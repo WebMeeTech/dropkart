@@ -1,0 +1,22 @@
+uuid: 117d3212-1820-463e-852c-6271c4beb9f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - themag
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: themag_content
+theme: themag
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
