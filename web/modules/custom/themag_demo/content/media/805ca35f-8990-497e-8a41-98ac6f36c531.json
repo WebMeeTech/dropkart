@@ -1,0 +1,313 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/media\/26\/edit?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/media\/gallery"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/media\/gallery\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/gallery\/thumbnail": [
+            {
+                "href": "",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/gallery\/field_media_slideshow": [
+            {
+                "href": "http:\/\/default\/media\/25\/edit?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/default\/media\/25\/edit?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/default\/media\/25\/edit?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/default\/media\/25\/edit?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/default\/media\/25\/edit?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/default\/media\/25\/edit?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/default\/media\/25\/edit?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/default\/media\/25\/edit?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "mid": [
+        {
+            "value": 26
+        }
+    ],
+    "uuid": [
+        {
+            "value": "805ca35f-8990-497e-8a41-98ac6f36c531"
+        }
+    ],
+    "vid": [
+        {
+            "value": 26
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "gallery"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2019-12-15T12:42:43+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/media\/gallery\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4fd1a941-35c2-4ec9-9fd7-12add5b795b6"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/gallery\/thumbnail": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ca529434-0772-420e-97d5-cab61c3fdb7d"
+                    }
+                ],
+                "lang": "en",
+                "alt": "",
+                "title": "Gallery Grid",
+                "width": "1440",
+                "height": "1050"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/gallery\/field_media_slideshow": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cf63c953-a8cb-4f09-867b-6844a4715d39"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cf63c953-a8cb-4f09-867b-6844a4715d39"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cf63c953-a8cb-4f09-867b-6844a4715d39"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cf63c953-a8cb-4f09-867b-6844a4715d39"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cf63c953-a8cb-4f09-867b-6844a4715d39"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cf63c953-a8cb-4f09-867b-6844a4715d39"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cf63c953-a8cb-4f09-867b-6844a4715d39"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cf63c953-a8cb-4f09-867b-6844a4715d39"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "name": [
+        {
+            "value": "Gallery Grid",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-09-21T13:19:59+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-09-21T13:21:22+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| TheMAG"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ]
+}

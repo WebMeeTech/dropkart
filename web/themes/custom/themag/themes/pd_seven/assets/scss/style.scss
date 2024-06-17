@@ -1,0 +1,366 @@
+//
+// Dependencies
+//
+@import "material-color-variables";
+$d: rgba(green, .3); // Debug Color
+
+
+// Bootstrap
+//
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+//
+// Tables
+//
+tbody tr:hover, tbody tr:focus {
+  background-color: #FFF;
+}
+
+
+//
+// Fieldset
+//
+
+fieldset {
+  background-color: transparent;
+}
+
+
+//
+// Forms
+//
+.form-item .description {
+  color: $gray-600;
+}
+
+//
+// Buttons
+//
+.button {
+  border-radius: 0;
+}
+
+
+//
+// Add/Edit Article Page
+//
+.node-form,
+.node-edit-form {
+  padding-bottom: 40px;
+
+  // Text input fields
+  //
+  @each $type in text, password, color, date, datetime-local, email, month, number, range, search, tel, time, url, week {
+    input[type=#{$type}] {
+      appearance: none;
+      display: block;
+      padding: 10px 1rem;
+      border: 1px solid $gray-400;
+      outline: none;
+      &:focus, &:active {
+        border-color: $blue-light-500;
+      }
+      &::placeholder {
+        color: $gray-blue-300;
+        transition: opacity .2s;
+      }
+    }
+  }
+  // Entity Browser Widget
+  .field--widget-entity-browser-entity-reference {
+    details {
+      border: none;
+    }
+  }
+
+  // Teaser media field
+  .field--name-field-teaser-media {
+    width: 200px;
+    img {
+      display: block;
+    }
+    .pd-preview-content {
+      display: none;
+    }
+    details {
+      summary {
+        display: none;
+      }
+      .details-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 1rem;
+        padding: 0;
+      }
+      .item-container {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+    }
+    .media--type-image .field--name-name {
+      display: none;
+    }
+    .button {
+      display: inline-block!important;
+      margin: .5rem 0!important;
+    }
+  }
+  fieldset.teaser .fieldset-wrapper {
+    display: flex;
+  }
+
+  // Paragraph Field
+  .paragraphs-tabs-wrapper {
+    background-color: $gray-200;
+    padding: .5rem 2rem 2rem;
+    table {
+      background-color: #FFF;
+      //margin-bottom: 2rem!important;
+    }
+  }
+
+  #edit-field-paragraphs--description,
+  #edit-field-paragraphs-description {
+    margin: 3rem 0 .8rem;
+    color: $gray-600;
+  }
+
+  .button.paragraph-type-add-modal-button {
+    background-color: #007bc6;
+    background-image: linear-gradient(to bottom, #007bc6, #0071b8);
+    border-color: #0071b8;
+    padding: .7rem 2rem;
+    color: #FFF;
+    text-shadow: none;
+  }
+
+  // Article save and delete button wrapper
+  #edit-actions {
+    background: $gray-200;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+
+//
+//  Field Paragraph
+//
+.paragraphs-tabs-wrapper {
+  .pd-preview-wrapper {
+    @media screen and (min-width: 922px) {
+      display: flex;
+    }
+  }
+  .pd-preview-thumb {
+    flex: 0 0 auto;
+  }
+  .pd-preview-content {
+    flex: 1;
+    @media screen and (min-width: 922px) {
+      padding-left: 20px;
+    }
+  }
+}
+
+
+//
+// Paragraph Subforms
+//
+.paragraphs-subform {
+
+  // Details
+  .paragraphs-content > details {
+    padding: 0;
+    > summary[aria-expanded="true"] {
+      display: none;
+    }
+    > .details-wrapper {
+      box-sizing: border-box;
+      padding: 0 20px 0 0;
+    }
+  }
+  // Buttons
+  .form-wrapper .button {
+    margin: 5px 5px 0 0;
+  }
+  .entities-list .item-container {
+    margin: 0;
+    > input {
+      display: inline-block;
+    }
+  }
+
+  // Iframe Entity Browser
+  .entity-browser-iframe-container {
+    .ajax-progress-fullscreen {
+      visibility: hidden;
+    }
+    iframe {
+      z-index: auto;
+    }
+  }
+
+  // Simple Inline Reference field widget.
+  // Used for embedding Facebook, Twitter, Instagram, etc.
+  .field--widget-inline-entity-form-simple {
+    padding: 10px 20px 20px 0;
+    > fieldset {
+      padding: 0;
+      border: none;
+      > legend {
+        display: none;
+      }
+    }
+  }
+
+  // Media images field.
+  // Used for creating image galleries.
+  .field--name-field-media-images {
+    > details > summary[aria-expanded="true"] {
+      display: none;
+    }
+
+    .details-wrapper {
+      padding: 0;
+    }
+    // Container with selected images
+    .entities-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px -5px 0;
+    }
+    // .entities-list Item
+    .item-container {
+      flex: 0 0 25%;
+      padding: 5px;
+      box-sizing: border-box;
+      position: relative;
+    }
+  }
+}
+
+
+
+//
+// Entity Browser
+//
+.view .view-content {
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.view.view-image-browser {
+  .view-content {
+    img {
+      display: block;
+      width: 100%;
+      max-width: none;
+      height: auto;
+    }
+  }
+  .views-exposed-form {
+    background: $gray-100;
+    margin: 10px;
+    padding: 5px 1rem;
+    .form--inline {
+      display: flex;
+      align-items: center;
+    }
+    .form-actions {
+      margin: 0;
+    }
+  }
+  .view-content {
+    width: 1245px;
+  }
+  .view-content ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .masonry-layout {
+    width: 100%;
+    .masonry-item {
+      width: 15%;
+      margin: 0 10px 10px;
+      padding: 0;
+    }
+  }
+
+  // Item select field (checkbox)
+  .views-row .views-field-entity-browser-select {
+    .form-item {
+      margin: 0;
+    }
+    input {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      cursor: pointer;
+      &:checked {
+        background-color: rgba($blue-light-500, .5);
+        border: 5px solid rgba($blue-light-500, 7);
+      }
+    }
+  }
+}
+
+// Old Paragraphs - Photo Gallery
+.paragraph--type--mg-parag-photo-gallery.paragraph--view-mode--preview,
+.paragraph--type--mg-parag-photo-gallery-slider.paragraph--view-mode--preview {
+.field--name-field-mg-images {
+    display: flex;
+    flex-wrap: wrap;
+    .field__item {
+      margin: 0 .5rem .5rem 0;
+    }
+  }
+}
+
+
+// Include some Bootstrap utilities
+//
+@import "bootstrap/scss/utilities/align";
+//@import "bootstrap/scss/utilities/background";
+//@import "bootstrap/scss/utilities/borders";
+//@import "bootstrap/scss/utilities/clearfix";
+@import "bootstrap/scss/utilities/display";
+//@import "bootstrap/scss/utilities/embed";
+@import "bootstrap/scss/utilities/flex";
+//@import "bootstrap/scss/utilities/float";
+@import "bootstrap/scss/utilities/overflow";
+//@import "bootstrap/scss/utilities/position";
+//@import "bootstrap/scss/utilities/screenreaders";
+@import "bootstrap/scss/utilities/shadows";
+@import "bootstrap/scss/utilities/sizing";
+//@import "bootstrap/scss/utilities/stretched-link";
+@import "bootstrap/scss/utilities/spacing";
+@import "bootstrap/scss/utilities/text";
+@import "bootstrap/scss/utilities/visibility";

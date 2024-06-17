@@ -1,0 +1,303 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/sunday-brunch-bae-bacon-avocado-egg-sandwich?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/article"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_channel": [
+            {
+                "href": "http:\/\/default\/travel-eats\/food-drinks?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_paragraphs": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_tags": [
+            {
+                "href": "http:\/\/default\/tag\/style?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_teaser_media": [
+            {
+                "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 54
+        }
+    ],
+    "uuid": [
+        {
+            "value": "11041d5e-3756-4af3-bf6b-46b985afeed1"
+        }
+    ],
+    "vid": [
+        {
+            "value": 149
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "article"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2018-09-02T11:37:03+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4fd1a941-35c2-4ec9-9fd7-12add5b795b6"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4fd1a941-35c2-4ec9-9fd7-12add5b795b6"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_channel": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/travel-eats\/food-drinks?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/channel"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "32c90636-e36c-43af-8517-6d314e3237a8"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_paragraphs": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "5c911c5d-3fdc-49b2-b1cc-0ce497d756a5"
+                    }
+                ],
+                "target_revision_id": "251"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cad74952-bc8f-4fc6-94a5-4ad00ae2fc9a"
+                    }
+                ],
+                "target_revision_id": "279"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_tags": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/tag\/style?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/tags"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3055923a-47a9-4adc-8cda-ddd44279d999"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_teaser_media": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cf63c953-a8cb-4f09-867b-6844a4715d39"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Sunday Brunch with BAE: Bacon Avocado Egg Sandwich",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-09-02T11:36:57+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2021-01-07T23:27:46+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "canonical_url": "http:\/\/default\/node\/54",
+                "robots": "index, follow",
+                "image_src": "http:\/\/default\/sites\/default\/files\/2018-09\/default-img_6_0.png",
+                "title": "Sunday Brunch with BAE: Bacon Avocado Egg Sandwich | TheMAG",
+                "description": "Nam at tellus quis risus scelerisque vestibulum. Integer in libero finibus leo tincidunt condimentum.",
+                "keywords": "style",
+                "og_site_name": "TheMAG",
+                "og_type": "article",
+                "og_url": "http:\/\/default\/home",
+                "og_description": "Nam at tellus quis risus scelerisque vestibulum. Integer in libero finibus leo tincidunt condimentum.",
+                "og_image_0": "http:\/\/default\/sites\/default\/files\/styles\/facebook\/public\/2018-09\/default-img_6_0.png?h=f87a8817&itok=zgwQeBD7",
+                "og_image_type": "image\/png",
+                "og_image_width": "1200",
+                "og_image_height": "630",
+                "og_updated_time": "2021-01-07T23:27:46+00:00",
+                "og_image_alt": "Default Image",
+                "article_tag_0": "style",
+                "article_published_time": "2018-09-02T12:36:57+01:00",
+                "article_modified_time": "2021-01-07T23:27:46+00:00",
+                "twitter_cards_type": "summary_large_image",
+                "twitter_cards_description": "Nam at tellus quis risus scelerisque vestibulum. Integer in libero finibus leo tincidunt condimentum.",
+                "twitter_cards_page_url": "http:\/\/default\/home",
+                "twitter_cards_image_alt": "Default Image",
+                "twitter_cards_image_height": "512",
+                "twitter_cards_image_width": "1024",
+                "twitter_cards_image": "http:\/\/default\/sites\/default\/files\/styles\/twitter\/public\/2018-09\/default-img_6_0.png?h=f87a8817&itok=aZNMOGXu"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/sunday-brunch-bae-bacon-avocado-egg-sandwich",
+            "pid": 37,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "field_comment": [
+        {
+            "status": 2,
+            "cid": 0,
+            "last_comment_timestamp": 1561470259,
+            "last_comment_name": null,
+            "last_comment_uid": 1,
+            "comment_count": 0
+        }
+    ],
+    "field_teaser_text": [
+        {
+            "value": "Nam at tellus quis risus scelerisque vestibulum. Integer in libero finibus leo tincidunt condimentum."
+        }
+    ]
+}

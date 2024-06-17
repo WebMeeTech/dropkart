@@ -1,0 +1,168 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/poll\/1?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/poll\/poll"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/poll\/poll\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/poll\/poll\/choice": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 1
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/poll\/poll\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4fd1a941-35c2-4ec9-9fd7-12add5b795b6"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/poll\/poll\/choice": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/poll_choice\/poll_choice"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fed731ce-7c35-46a4-9412-cde2dacfda11"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/poll_choice\/poll_choice"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4bd61302-d051-4860-a10e-76ff35f6aadf"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/poll_choice\/poll_choice"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "272acd65-f5e9-480e-80b5-cc0ce59221e1"
+                    }
+                ]
+            }
+        ]
+    },
+    "uuid": [
+        {
+            "value": "396aca72-a9f9-4392-a428-2c66082a5dfd"
+        }
+    ],
+    "question": [
+        {
+            "value": "Question?",
+            "lang": "en"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "runtime": [
+        {
+            "value": 0
+        }
+    ],
+    "anonymous_vote_allow": [
+        {
+            "value": true
+        }
+    ],
+    "cancel_vote_allow": [
+        {
+            "value": true
+        }
+    ],
+    "result_vote_allow": [
+        {
+            "value": true
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-06-02T20:58:39+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| TheMAG"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ]
+}

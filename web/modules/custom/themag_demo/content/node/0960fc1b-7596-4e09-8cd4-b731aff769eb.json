@@ -1,0 +1,284 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/10-worlds-most-insanely-luxurious-houses?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/article"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_channel": [
+            {
+                "href": "http:\/\/default\/life-style\/style?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_paragraphs": [
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_tags": [
+            {
+                "href": "http:\/\/default\/tag\/style?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_teaser_media": [
+            {
+                "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 51
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0960fc1b-7596-4e09-8cd4-b731aff769eb"
+        }
+    ],
+    "vid": [
+        {
+            "value": 146
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "article"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2018-09-02T11:30:08+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4fd1a941-35c2-4ec9-9fd7-12add5b795b6"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4fd1a941-35c2-4ec9-9fd7-12add5b795b6"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_channel": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/life-style\/style?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/channel"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "61943b17-d795-4630-b0ec-1ed678fc1229"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_paragraphs": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "323bac79-72d4-4a27-b0d4-e9eb7120db4e"
+                    }
+                ],
+                "target_revision_id": "248"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_tags": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/tag\/style?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/tags"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3055923a-47a9-4adc-8cda-ddd44279d999"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_teaser_media": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cf63c953-a8cb-4f09-867b-6844a4715d39"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "10 of the World's Most Insanely Luxurious Houses",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-09-02T11:29:51+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-06-25T13:42:26+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "canonical_url": "http:\/\/default\/node\/51",
+                "robots": "index, follow",
+                "image_src": "http:\/\/default\/sites\/default\/files\/2018-09\/default-img_6_0.png",
+                "title": "10 of the World's Most Insanely Luxurious Houses | TheMAG",
+                "description": "In nec sem id nibh vestibulum dapibus ut ut enim. Integer eget porta ligula.",
+                "keywords": "style",
+                "og_site_name": "TheMAG",
+                "og_type": "article",
+                "og_url": "http:\/\/default\/home",
+                "og_description": "In nec sem id nibh vestibulum dapibus ut ut enim. Integer eget porta ligula.",
+                "og_image_0": "http:\/\/default\/sites\/default\/files\/styles\/facebook\/public\/2018-09\/default-img_6_0.png?h=f87a8817&itok=zgwQeBD7",
+                "og_image_type": "image\/png",
+                "og_image_width": "1200",
+                "og_image_height": "630",
+                "og_updated_time": "2019-06-25T14:42:26+01:00",
+                "og_image_alt": "Default Image",
+                "article_tag_0": "style",
+                "article_published_time": "2018-09-02T12:29:51+01:00",
+                "article_modified_time": "2019-06-25T14:42:26+01:00",
+                "twitter_cards_type": "summary_large_image",
+                "twitter_cards_description": "In nec sem id nibh vestibulum dapibus ut ut enim. Integer eget porta ligula.",
+                "twitter_cards_page_url": "http:\/\/default\/home",
+                "twitter_cards_image_alt": "Default Image",
+                "twitter_cards_image_height": "512",
+                "twitter_cards_image_width": "1024",
+                "twitter_cards_image": "http:\/\/default\/sites\/default\/files\/styles\/twitter\/public\/2018-09\/default-img_6_0.png?h=f87a8817&itok=aZNMOGXu"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/10-worlds-most-insanely-luxurious-houses",
+            "pid": 31,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "field_comment": [
+        {
+            "status": 2,
+            "cid": 0,
+            "last_comment_timestamp": 1561470146,
+            "last_comment_name": null,
+            "last_comment_uid": 1,
+            "comment_count": 0
+        }
+    ],
+    "field_teaser_text": [
+        {
+            "value": "In nec sem id nibh vestibulum dapibus ut ut enim. Integer eget porta ligula."
+        }
+    ]
+}

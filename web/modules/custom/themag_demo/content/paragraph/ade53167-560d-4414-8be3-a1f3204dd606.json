@@ -1,0 +1,88 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+        }
+    },
+    "id": [
+        {
+            "value": 118
+        }
+    ],
+    "uuid": [
+        {
+            "value": "ade53167-560d-4414-8be3-a1f3204dd606"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 262
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "text"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-09-02T12:00:53+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "65"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_paragraphs"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_text": [
+        {
+            "value": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida venenatis tristique. Phasellus et feugiat odio. Aliquam imperdiet sit amet risus nec volutpat. Nam at tellus quis risus scelerisque vestibulum. Integer in libero finibus leo tincidunt condimentum.<\/p>\r\n",
+            "format": "full_html",
+            "processed": "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida venenatis tristique. Phasellus et feugiat odio. Aliquam imperdiet sit amet risus nec volutpat. Nam at tellus quis risus scelerisque vestibulum. Integer in libero finibus leo tincidunt condimentum.<\/p>\n"
+        }
+    ]
+}

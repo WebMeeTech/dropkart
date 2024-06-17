@@ -1,0 +1,92 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/3?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 3
+        }
+    ],
+    "uuid": [
+        {
+            "value": "b53fdcd3-00e9-4c33-bcd1-c7e58557ef43"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 3
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1493026336
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "info": [
+        {
+            "value": "Copyright notice",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1537969494,
+            "lang": "en"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| TheMAG"
+            }
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>TheMAG \u00a9 2018<\/p>\r\n",
+            "format": "full_html",
+            "processed": "<p>TheMAG \u00a9 2018<\/p>\n",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

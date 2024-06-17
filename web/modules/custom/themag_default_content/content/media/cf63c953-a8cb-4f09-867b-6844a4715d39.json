@@ -1,0 +1,169 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/media\/25\/edit?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/thumbnail": [
+            {
+                "href": "",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_image": [
+            {
+                "href": ""
+            }
+        ]
+    },
+    "mid": [
+        {
+            "value": 25
+        }
+    ],
+    "uuid": [
+        {
+            "value": "cf63c953-a8cb-4f09-867b-6844a4715d39"
+        }
+    ],
+    "vid": [
+        {
+            "value": 25
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "image"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1561626830
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "580d5ef6-ac2f-461f-adc5-b01377ee131e"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/thumbnail": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ca529434-0772-420e-97d5-cab61c3fdb7d"
+                    }
+                ],
+                "lang": "en",
+                "alt": "Default Image",
+                "title": "Default Image",
+                "width": "1440",
+                "height": "1050"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ca529434-0772-420e-97d5-cab61c3fdb7d"
+                    }
+                ],
+                "alt": "Default Image",
+                "title": "",
+                "width": "1440",
+                "height": "1050"
+            }
+        ]
+    },
+    "name": [
+        {
+            "value": "Default Image",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": 1535804336,
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1537540741,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| TheMAG"
+            }
+        }
+    ],
+    "field_description": [
+        {
+            "value": "Etiam gravida gravida quam interdum rhoncus. Vestibulum facilisis non orci et vulputate. Aliquam finibus tristique bibendum."
+        }
+    ]
+}
