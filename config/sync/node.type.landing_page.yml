@@ -1,0 +1,19 @@
+uuid: 2ed1664f-dea9-412a-b522-27ca526406cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - footer
+      - main
+    parent: 'main:'
+name: 'Landing Page'
+type: landing_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

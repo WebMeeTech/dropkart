@@ -1,0 +1,19 @@
+uuid: ad77a9c9-05d5-4a71-976b-e6751b90cf8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page
+  module:
+    - user
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
