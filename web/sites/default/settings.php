@@ -869,9 +869,9 @@ $settings['file_scan_ignore_directories'] = [
 $settings['entity_update_batch_size'] = 50;
 
 $settings['config_sync_directory'] ='../config/sync';
-$settings['file_private_path'] = '../private/files';
-$settings['file_temp_path'] = '../private/temp';
-$settings['encrypted_file_path'] = '../private/encrypted';
+//$settings['file_private_path'] = '../private/files';
+//$settings['file_temp_path'] = '../private/temp';
+//$settings['encrypted_file_path'] = '../private/encrypted';
 $settings['http_client_config']['timeout'] = 60;
 
 /**
