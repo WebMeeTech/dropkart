@@ -3,10 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_teaser_media
+    - field.storage.node.field_slider_image
+    - image.style.wide
     - node.type.slider
   module:
-    - field_formatter
+    - media
     - node
     - slick_views
     - user
@@ -89,10 +90,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_teaser_media:
-          id: field_teaser_media
-          table: node__field_teaser_media
-          field: field_teaser_media
+        field_slider_image:
+          id: field_slider_image
+          table: node__field_slider_image
+          field: field_slider_image
           relationship: none
           group_type: group
           admin_label: ''
@@ -139,15 +140,16 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: field_formatter_with_inline_settings
+          type: media_thumbnail
           settings:
-            field_name: field_media_image
-            label: hidden
-            link_to_entity: false
-          group_column: ''
+            image_link: ''
+            image_style: wide
+            image_loading:
+              attribute: lazy
+          group_column: target_id
           group_columns: {  }
           group_rows: true
-          delta_limit: 0
+          delta_limit: 3
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
@@ -158,7 +160,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 3
+          items_per_page: 2
       exposed_form:
         type: basic
         options:
@@ -285,7 +287,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_teaser_media'
+        - 'config:field.storage.node.field_slider_image'
   block_1:
     id: block_1
     display_title: 'Single Item Slider'
@@ -303,4 +305,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_teaser_media'
+        - 'config:field.storage.node.field_slider_image'

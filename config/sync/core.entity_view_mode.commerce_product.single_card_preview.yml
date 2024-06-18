@@ -1,0 +1,11 @@
+uuid: adaa56ce-389d-46c0-8654-0b756cc3288c
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.single_card_preview
+label: 'Single Card Preview'
+description: ''
+targetEntityType: commerce_product
+cache: true

@@ -6,7 +6,7 @@ id: single_item_slider
 name: single_item_slider
 weight: 0
 label: 'Single item slider'
-group: ''
+group: thumbnail
 skin: fullwidth
 breakpoints: 0
 optimized: false
