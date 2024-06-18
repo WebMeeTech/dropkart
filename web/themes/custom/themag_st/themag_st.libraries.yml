@@ -1,0 +1,16 @@
+global:
+  version: VERSION
+  css:
+    theme:
+      assets/css/subtheme.css: {}
+
+custom-css:
+  version: VERSION
+  css:
+    theme:
+      assets/css/custom.css: {}
+
+custom-js:
+  version: VERSION
+  js:
+    assets/js/custom.js: {}
