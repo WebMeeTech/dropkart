@@ -48,8 +48,8 @@ function themag_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#title' => t('Enable scroll to top button'),
     '#default_value' => theme_get_setting('themag_toggle_scroll_to_top'),
     '#description' =>
-      t('When a user scrolls past a certain point on the website, 
-        this helpful button appears, enabling users to easily 
+      t('When a user scrolls past a certain point on the website,
+        this helpful button appears, enabling users to easily
         return to the top of a page.'),
   );
 
@@ -58,8 +58,8 @@ function themag_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#title' => t('Enable sticky sidebars'),
     '#default_value' => theme_get_setting('themag_sticky_sidebar'),
     '#description' =>
-      t('Sticky elements taller than the viewport can scroll independently 
-        up and down, meaning you don\'t have to worry about your content 
+      t('Sticky elements taller than the viewport can scroll independently
+        up and down, meaning you don\'t have to worry about your content
         being cut off.'),
   );
 
@@ -98,7 +98,7 @@ function themag_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#default_value' => theme_get_setting('themag_header_style'),
     '#description' => t('Choose a header for your site.
       You can also choose a "Custom Header" and create your own header by editing the
-      "<strong>' . drupal_get_path('theme', 'themag_st') . '/templates/header/custom_header.inc</strong>" file.'),
+      "<strong>' . \Drupal::service('extension.path.resolver')->getPath('theme', 'themag_st') . '/templates/header/custom_header.inc</strong>" file.'),
   );
 
   // Header Banner
@@ -131,8 +131,8 @@ function themag_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#title' => t('Enable sticky header'),
     '#default_value' => theme_get_setting('themag_sticky_header'),
     '#description' =>
-      t('The sticky header can help to make it easier for visitors 
-        to navigate through a site as they can quickly access the navigation menu 
+      t('The sticky header can help to make it easier for visitors
+        to navigate through a site as they can quickly access the navigation menu
         rather than having to scroll back to the top of the page.')
   );
 
@@ -310,7 +310,7 @@ function themag_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#title' => t('Show media icons in the teasers'),
     '#default_value' => theme_get_setting('themag_teaser_show_media_contained_icons'),
     '#description' =>
-      t('This feature will add a photo or a video icon over the 
+      t('This feature will add a photo or a video icon over the
         teaser image, depending on the Article\'s content.'),
   );
 
@@ -391,14 +391,14 @@ function themag_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
   $form['advanced']['css_js_files']['themag_use_custom_css_file'] = array(
     '#type' => 'checkbox',
     '#title' => t('Enable custom.css'),
-    '#description' => t('You can override existing styles by writing extra CSS in the "' . drupal_get_path('theme', 'themag_st') . '/assets/css/custom.css" file.'),
+    '#description' => t('You can override existing styles by writing extra CSS in the "' . \Drupal::service('extension.path.resolver')->getPath('theme', 'themag_st'). '/assets/css/custom.css" file.'),
     '#default_value' => theme_get_setting('themag_use_custom_css_file'),
   );
 
   $form['advanced']['css_js_files']['themag_use_custom_js_file'] = array(
     '#type' => 'checkbox',
     '#title' => t('Enable custom.js'),
-    '#description' => t('Write your own JavaSscript code in the' . drupal_get_path('theme', 'themag_st') . '/assets/js/custom.js" file.'),
+    '#description' => t('Write your own JavaSscript code in the' . \Drupal::service('extension.path.resolver')->getPath('theme', 'themag_st'). '/assets/js/custom.js" file.'),
     '#default_value' => theme_get_setting('themag_use_custom_js_file'),
   );
 
@@ -416,7 +416,7 @@ function themag_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#default_value' => theme_get_setting('themag_additional_css'),
     '#description' => t('Use this field to make small theme tweaks,
       or to add some custom CSS styles. If you plan to make more significant
-      style changes please use "<strong>' . drupal_get_path('theme', 'themag') . '/assets/css/custom.css</strong>".
+      style changes please use "<strong>' . \Drupal::service('extension.path.resolver')->getPath('theme', 'themag_st') . '/assets/css/custom.css</strong>".
       The style from this field will override custom.css styles. Note: Please use the code without &lt;style&gt; tag included.'),
   );
 
@@ -433,10 +433,10 @@ function themag_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#title' => t('JavaScript Tracking/SDK code snipets'),
     '#default_value' => theme_get_setting('themag_additional_javascript'),
     '#description' =>
-      t('The content of this field is inserted directly after the 
-      opening &lt;body&gt; tag on each page. Use this field to add JavaScript 
-      tracking code snippets or JavaScript SDK code snippets 
-      (example: Facebook SDK for JavaScript). Note: Please use the code 
+      t('The content of this field is inserted directly after the
+      opening &lt;body&gt; tag on each page. Use this field to add JavaScript
+      tracking code snippets or JavaScript SDK code snippets
+      (example: Facebook SDK for JavaScript). Note: Please use the code
       with &lt;script&gt; tag included.'),
   );
 
@@ -454,10 +454,10 @@ function themag_form_system_theme_settings_alter(&$form, FormStateInterface &$fo
     '#type' => 'details',
     '#title' => t('Compatibility Mode'),
     '#description' =>
-      t('This option provides a backward theme compatibility. 
-      You have to enable this option only if you update the theme from any 
-      version before version 3. You can also use all the new theme features, 
-      the compatibility mode only loads the styles and libraries which 
+      t('This option provides a backward theme compatibility.
+      You have to enable this option only if you update the theme from any
+      version before version 3. You can also use all the new theme features,
+      the compatibility mode only loads the styles and libraries which
       are removed from the TheMAG version 3.<br><br>
       <strong>DO NOT ENABLE COMPATIBILITY MODE IF YOU START WITH THE THEME FROM VERSION 3 OR ABOVE!</strong><br><br>'),
     '#open' => TRUE,
