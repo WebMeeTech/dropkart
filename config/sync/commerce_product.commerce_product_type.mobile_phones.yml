@@ -1,0 +1,14 @@
+uuid: 4679fb40-1232-4949-881f-2c826c7335fd
+langcode: en
+status: true
+dependencies: {  }
+id: mobile_phones
+label: 'Mobile Phones'
+traits: {  }
+locked: false
+description: ''
+variationType: mobile_phones
+variationTypes:
+  - mobile_phones
+multipleVariations: true
+injectVariationFields: true

@@ -1,23 +1,26 @@
-uuid: ad648bfd-b6dd-42cd-8579-0e785e99f017
+uuid: c9d231d9-538b-49f8-a24e-4a1a3703ce0e
 langcode: en
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_variation_type.default
-    - core.entity_view_mode.commerce_product_variation.summary
     - field.field.commerce_product_variation.default.field_image
   module:
     - commerce_price
-  enforced:
-    module:
-      - commerce_checkout
-_core:
-  default_config_hash: jmDRQILFIWJUS3jS-qLF10aGc1IXnvFEBizwJl94FfU
-id: commerce_product_variation.default.summary
+id: commerce_product_variation.default.default
 targetEntityType: commerce_product_variation
 bundle: default
-mode: summary
+mode: default
 content:
+  field_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   list_price:
     type: commerce_price_default
     label: above
@@ -27,23 +30,16 @@ content:
     third_party_settings: {  }
     weight: -1
     region: content
-  product_id:
-    type: entity_reference_label
-    label: hidden
+  price:
+    type: commerce_price_default
+    label: above
     settings:
-      link: true
+      strip_trailing_zeroes: false
+      currency_display: symbol
     third_party_settings: {  }
     weight: 0
     region: content
-  title:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: -5
-    region: content
 hidden:
-  field_image: true
-  price: true
+  product_id: true
   sku: true
+  title: true

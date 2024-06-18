@@ -1,0 +1,10 @@
+uuid: 71330af6-472b-4278-8f39-55f845622126
+langcode: en
+status: true
+dependencies: {  }
+id: laptops
+label: Laptops
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: null

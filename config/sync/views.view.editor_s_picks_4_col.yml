@@ -2,6 +2,8 @@ uuid: 2785be6c-6771-48b2-a26f-91c220e0b826
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.commerce_product.compact_preview
   module:
     - commerce_product
 id: editor_s_picks_4_col
@@ -131,6 +133,9 @@ display:
           class: ''
       row:
         type: 'entity:commerce_product'
+        options:
+          relationship: none
+          view_mode: compact_preview
       query:
         type: views_query
         options:

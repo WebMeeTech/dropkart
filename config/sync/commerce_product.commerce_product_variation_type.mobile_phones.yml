@@ -1,0 +1,10 @@
+uuid: 49a2554a-756c-4344-baca-0cc0a8606adf
+langcode: en
+status: true
+dependencies: {  }
+id: mobile_phones
+label: 'Mobile Phones'
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: null

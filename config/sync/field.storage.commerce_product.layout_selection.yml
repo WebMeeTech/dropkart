@@ -1,0 +1,20 @@
+uuid: aec6cdf4-20d5-455e-a791-9cea76df53b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - layout_library
+id: commerce_product.layout_selection
+field_name: layout_selection
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: layout
+module: core
+locked: true
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
