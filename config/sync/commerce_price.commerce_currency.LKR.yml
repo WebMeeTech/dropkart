@@ -1,0 +1,9 @@
+uuid: f6ee21c7-0752-4532-805c-b6b1f0f5b681
+langcode: en
+status: true
+dependencies: {  }
+currencyCode: LKR
+name: 'Sri Lankan Rupee'
+numericCode: '144'
+symbol: LKR
+fractionDigits: 2
