@@ -1,0 +1,22 @@
+uuid: d3195fa2-dd48-4926-8f89-32420316b2f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - themag
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: themag_powered
+theme: themag
+region: top_bar_first
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

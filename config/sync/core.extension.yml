@@ -38,6 +38,8 @@ module:
   history: 0
   image: 0
   inline_entity_form: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -54,6 +56,7 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  themag_layouts: 0
   token: 0
   toolbar: 0
   update: 0
@@ -64,4 +67,9 @@ module:
 theme:
   olivero: 0
   claro: 0
+  stable: 0
+  classy: 0
+  charm: 0
+  themag: 0
+  themag_st: 0
 profile: standard

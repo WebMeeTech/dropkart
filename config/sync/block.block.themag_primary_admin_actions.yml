@@ -1,0 +1,20 @@
+uuid: de5e898c-e5de-4938-afec-9cd1960dc230
+langcode: en
+status: true
+dependencies:
+  theme:
+    - themag
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: themag_primary_admin_actions
+theme: themag
+region: top_bar_first
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

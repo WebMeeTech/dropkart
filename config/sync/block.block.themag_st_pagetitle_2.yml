@@ -1,0 +1,20 @@
+uuid: 84ccb596-5e45-44e5-a7ab-e23b86e3d40b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - themag_st
+_core:
+  default_config_hash: A_z2nai3TZ5mSDWb8hEGUiWWZZ8CGoYNJ5GgbvqrhFI
+id: themag_st_pagetitle_2
+theme: themag_st
+region: content_header
+weight: -8
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }
