@@ -1,10 +1,10 @@
-uuid: 42b0e267-34b9-4bb9-8d94-beabeebd20ff
+uuid: b4dca5d6-a501-44e8-a3d9-0b33a72d61fa
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
-    - field.field.node.landing_page.layout_selection
+    - field.field.node.landing_page.layout_builder__layout
     - node.type.landing_page
   module:
     - path
@@ -27,12 +27,6 @@ content:
   created:
     type: datetime_timestamp
     weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  layout_selection:
-    type: options_select
-    weight: 122
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -81,4 +75,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true
