@@ -1,0 +1,20 @@
+uuid: fb1f9c4c-ff1b-4ea3-b3ab-68fd955d2c24
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_slider_image
+field_name: field_slider_image
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

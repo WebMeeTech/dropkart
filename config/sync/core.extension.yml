@@ -3,13 +3,17 @@ _core:
 module:
   address: 0
   admin_toolbar: 0
+  admin_toolbar_tools: 0
   announcements_feed: 0
   automated_cron: 0
+  better_normalizers: 0
   big_pipe: 0
+  blazy: 0
   block: 0
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
+  color_field: 0
   comment: 0
   commerce: 0
   commerce_cart: 0
@@ -26,19 +30,28 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  default_content: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
   entity_reference_revisions: 0
+  entityqueue: 0
   field: 0
+  field_formatter: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
+  hal: 0
   help: 0
   history: 0
   image: 0
   inline_entity_form: 0
+  layout_builder: 0
+  layout_discovery: 0
+  layout_library: 0
   link: 0
+  media: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0
@@ -49,11 +62,18 @@ module:
   path_alias: 0
   profile: 0
   search: 0
+  serialization: 0
   shortcut: 0
+  slick: 0
+  slick_ui: 0
+  slick_views: 0
   state_machine: 0
   system: 0
   taxonomy: 0
   text: 0
+  themag_commerce_field_group: 0
+  themag_default_content: 0
+  themag_layouts: 0
   token: 0
   toolbar: 0
   update: 0

@@ -1,0 +1,21 @@
+uuid: 8489a086-7f1c-4f5c-abad-bf6092f580b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - media
+    - node
+id: node.field_teaser_media
+field_name: field_teaser_media
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: media
+module: entity_reference_revisions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
