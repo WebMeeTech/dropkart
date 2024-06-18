@@ -1,0 +1,29 @@
+uuid: 9d4df003-8fa7-4670-8517-5ba7782e84be
+langcode: en
+status: true
+dependencies: {  }
+id: home_page_1
+label: 'Home Page 1'
+targetEntityType: block_content
+targetBundle: basic
+layout:
+  -
+    layout_id: layout_onecol
+    layout_settings:
+      label: ''
+      context_mapping: {  }
+    components:
+      e002c128-c2b0-483f-adba-7d291c4a4928:
+        uuid: e002c128-c2b0-483f-adba-7d291c4a4928
+        region: content
+        configuration:
+          id: 'views_block:carousel_home_page-block_1'
+          label: ''
+          label_display: '0'
+          provider: views
+          context_mapping: {  }
+          views_label: ''
+          items_per_page: none
+        weight: 0
+        additional: {  }
+    third_party_settings: {  }

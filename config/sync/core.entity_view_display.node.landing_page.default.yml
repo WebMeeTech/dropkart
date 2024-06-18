@@ -1,0 +1,62 @@
+uuid: 26a7ff79-d6ac-4a0f-9156-ccdf9ca62612
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.layout_selection
+    - node.type.landing_page
+    - views.view.carousel_home_page
+  module:
+    - layout_builder
+    - layout_discovery
+    - layout_library
+    - text
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          4817fe77-eeb4-4185-a4a7-7238bc3cf291:
+            uuid: 4817fe77-eeb4-4185-a4a7-7238bc3cf291
+            region: content
+            configuration:
+              id: 'views_block:carousel_home_page-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_library:
+    enable: true
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  layout_selection: true
