@@ -1,0 +1,34 @@
+uuid: bed2f134-c695-4c06-89ef-c898668d6910
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.carousel_slider.body
+    - field.field.node.carousel_slider.field_slide_image
+    - field.field.node.carousel_slider.field_text
+    - node.type.carousel_slider
+  module:
+    - text
+    - user
+id: node.carousel_slider.teaser
+targetEntityType: node
+bundle: carousel_slider
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_slide_image: true
+  field_text: true

@@ -1,48 +1,36 @@
-uuid: 90c48ce1-9e84-4f78-946a-06c561ae34e1
+uuid: 8b555f6f-c561-48ac-a7ab-6e93ee19c9a6
 langcode: en
-status: false
-dependencies:
-  enforced:
-    module:
-      - slick
-_core:
-  default_config_hash: jHmfPBU2oNraKWjKwqYODaPOKQQM2sczj5TlDlN8Om8
-id: default
-name: default
+status: true
+dependencies: {  }
+id: carousel_slider_home
+name: carousel_slider_home
 weight: -10
-label: Default
+label: 'Carousel Slider Home'
 group: ''
-skin: default
+skin: ''
 breakpoints: 0
 optimized: false
 options:
-  options__active_tab: ''
+  options__active_tab: edit-options-settings
   settings:
-    mobileFirst: false
+    mobileFirst: true
     asNavFor: ''
     accessibility: true
-    regionLabel: carousel
-    useGroupRole: true
-    instructionsText: ''
     adaptiveHeight: false
-    autoplay: false
-    autoplaySpeed: 3000
-    useAutoplayToggleButton: true
-    pauseIcon: slick-pause-icon
-    playIcon: slick-play-icon
+    autoplay: true
     pauseOnHover: true
     pauseOnDotsHover: false
     pauseOnFocus: true
+    autoplaySpeed: 3000
     arrows: true
     prevArrow: Previous
     nextArrow: Next
-    arrowsPlacement: ''
     downArrow: false
     downArrowTarget: ''
     downArrowOffset: 0
-    centerMode: false
+    centerMode: true
     centerPadding: 50px
-    dots: false
+    dots: true
     dotsClass: slick-dots
     appendDots: $(element)
     draggable: true
@@ -68,10 +56,10 @@ options:
     touchThreshold: 5
     useCSS: true
     cssEase: ease
-    cssEaseBezier: ''
-    cssEaseOverride: ''
+    cssEaseBezier: ease
+    cssEaseOverride: ease
     useTransform: true
-    easing: linear
+    easing: ''
     variableWidth: false
     vertical: false
     verticalSwiping: false

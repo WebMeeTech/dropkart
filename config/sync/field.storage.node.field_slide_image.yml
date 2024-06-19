@@ -1,18 +1,18 @@
-uuid: b30a3a06-0d24-4643-b7e2-027715515076
+uuid: d9ea4edf-c820-40b3-bd26-9914bbff5775
 langcode: en
 status: true
 dependencies:
   module:
-    - layout_library
+    - media
     - node
-id: node.layout_selection
-field_name: layout_selection
+id: node.field_slide_image
+field_name: field_slide_image
 entity_type: node
 type: entity_reference
 settings:
-  target_type: layout
+  target_type: media
 module: core
-locked: true
+locked: false
 cardinality: 1
 translatable: true
 indexes: {  }
