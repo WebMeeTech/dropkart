@@ -1,4 +1,4 @@
-uuid: ac50bf37-fb99-4133-81b7-2e1f2b601772
+uuid: 3638c9e0-981c-4f7f-a124-e5f3afc656e0
 langcode: en
 status: true
 dependencies:
@@ -6,12 +6,10 @@ dependencies:
     - system
   theme:
     - themag_st
-_core:
-  default_config_hash: hIszHL-THFrkLu_iq9FwFzqaK_4Czs6SkyR34TGIZnI
-id: themag_st_sitebranding_3
+id: themag_st_sitebranding
 theme: themag_st
 region: logo
-weight: -9
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:
