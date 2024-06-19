@@ -1,0 +1,17 @@
+uuid: 84fc7137-baee-4193-b591-a72fc6cce1ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: slider_single_item_slider_1600x800
+label: 'Slider - Single Item Slider (1600x800)'
+effects:
+  79d2a77f-f3a5-4dba-9c32-f7841b42e6ab:
+    uuid: 79d2a77f-f3a5-4dba-9c32-f7841b42e6ab
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 800
+      crop_type: focal_point

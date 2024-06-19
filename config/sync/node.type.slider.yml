@@ -1,4 +1,4 @@
-uuid: 99cee76c-c0d9-4f37-b31a-5f45d09ff00b
+uuid: c0fa6f47-3d06-42d9-839a-4e167f24ac10
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,12 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
-      - footer
       - main
     parent: 'main:'
-name: 'Landing Page'
-type: landing_page
-description: ''
+name: Slider
+type: slider
+description: 'This Slider is used to manage the slides of the carousel'
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: false
+display_submitted: true

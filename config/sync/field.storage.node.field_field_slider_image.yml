@@ -1,12 +1,12 @@
-uuid: d9ea4edf-c820-40b3-bd26-9914bbff5775
+uuid: f064bbdc-8f94-4cac-8f58-8775529e276e
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - node
-id: node.field_slide_image
-field_name: field_slide_image
+id: node.field_field_slider_image
+field_name: field_field_slider_image
 entity_type: node
 type: entity_reference
 settings:

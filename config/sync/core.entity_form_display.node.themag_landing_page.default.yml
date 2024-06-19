@@ -1,57 +1,31 @@
-uuid: 7aaaadc1-1a71-4684-83d5-808c44e85b2b
+uuid: b0cf2b2b-7392-4c97-9ae4-becad14d0033
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.carousel_slider.body
-    - field.field.node.carousel_slider.field_slide_image
-    - field.field.node.carousel_slider.field_text
-    - node.type.carousel_slider
+    - field.field.node.themag_landing_page.field_teaser_media
+    - field.field.node.themag_landing_page.field_teaser_text
+    - field.field.node.themag_landing_page.layout_builder__layout
+    - field.field.node.themag_landing_page.layout_selection
+    - node.type.themag_landing_page
   module:
-    - inline_entity_form
     - path
-    - text
-id: node.carousel_slider.default
+id: node.themag_landing_page.default
 targetEntityType: node
-bundle: carousel_slider
+bundle: themag_landing_page
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_slide_image:
-    type: inline_entity_form_simple
-    weight: 122
+  layout_selection:
+    type: options_select
+    weight: 121
     region: content
-    settings:
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      collapsible: false
-      collapsed: false
-      revision: false
-    third_party_settings: {  }
-  field_text:
-    type: string_textfield
-    weight: 123
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -98,4 +72,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_teaser_media: true
+  field_teaser_text: true
+  layout_builder__layout: true

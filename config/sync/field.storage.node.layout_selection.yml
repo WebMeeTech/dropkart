@@ -1,19 +1,18 @@
-uuid: 6af145f7-de43-4e66-9acc-f9da9342c673
+uuid: 1975388a-1773-4a64-a7fc-3a0c78ebcb30
 langcode: en
 status: true
 dependencies:
   module:
+    - layout_library
     - node
-id: node.field_text
-field_name: field_text
+id: node.layout_selection
+field_name: layout_selection
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
+  target_type: layout
 module: core
-locked: false
+locked: true
 cardinality: 1
 translatable: true
 indexes: {  }

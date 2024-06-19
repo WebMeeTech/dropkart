@@ -1,4 +1,4 @@
-uuid: 871a1cfe-385a-4044-95c4-44e25825353f
+uuid: 908d8f8f-a387-47ff-ba31-155eb0598c81
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,13 @@ dependencies:
 third_party_settings:
   menu_ui:
     available_menus:
+      - footer
       - main
     parent: 'main:'
-name: 'Carousel Slider'
-type: carousel_slider
+name: 'Landing Page'
+type: themag_landing_page
 description: ''
 help: ''
 new_revision: true
-preview_mode: 1
+preview_mode: 0
 display_submitted: false

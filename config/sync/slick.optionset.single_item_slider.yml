@@ -40,7 +40,7 @@ options:
     initialSlide: 0
     lazyLoad: ondemand
     mouseWheel: false
-    randomize: true
+    randomize: false
     respondTo: window
     rtl: false
     rows: 1

@@ -1,17 +1,16 @@
-uuid: 0f3d282f-14c9-40a1-80c3-88f62b8d06b0
+uuid: cc973160-10a8-42e1-9f3f-e886ffb111f0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_slide_image
-    - image.style.slick_media
-    - node.type.carousel_slider
+    - field.storage.node.field_field_slider_image
+    - node.type.slider
   module:
-    - media
+    - field_formatter
     - node
     - slick_views
     - user
-id: home_page_carousel
+id: 'n'
 label: 'Home Page Carousel'
 module: views
 description: ''
@@ -90,19 +89,87 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_slide_image:
-          id: field_slide_image
-          table: node__field_slide_image
-          field: field_slide_image
+        field_field_slider_image:
+          id: field_field_slider_image
+          table: node__field_field_slider_image
+          field: field_field_slider_image
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: true
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: true
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: field_formatter_with_inline_settings
+          settings:
+            field_name: field_media_image
+            type: image_url
+            settings:
+              image_style: slider_single_item_slider_1600x800
+            label: hidden
+            link_to_entity: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<article class=\"teaser d-flex align-items-center text-center\" data-background=\"image\"  data-height=\"60vh\" data-src=\"{{ field_field_slider_image }}\" data-overlay>\r\n    <div class=\"container teaser__content\">\r\n      <div class=\"row\">\r\n        <div class=\"col-12 col-lg-10 mx-lg-auto\">\r\n          <header>\r\n        <div class=\"teaser__channel teaser__channel--light d-inline-flex align-items-center\">\r\n          <i data-background data-color=\"{{ field_color }}\"></i>\r\n          {{ field_channel }} \r\n        </div>\r\n        <h2 class=\"teaser__headline teaser__headline--large teaser__headline--light\">\r\n          {{ title }}\r\n        </h2>\r\n      </header>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <a class=\"teaser__link-overlay\" href=\"{{ view_node }}\"></a>\r\n</article>"
             make_link: false
             path: ''
             absolute: false
@@ -138,24 +205,7 @@ display:
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: media_thumbnail
-          settings:
-            image_link: ''
-            image_style: slick_media
-            image_loading:
-              attribute: lazy
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+          hide_alter_empty: false
       pager:
         type: some
         options:
@@ -217,12 +267,11 @@ display:
           entity_field: type
           plugin_id: bundle
           value:
-            carousel_slider: carousel_slider
+            slider: slider
       style:
         type: slick
         options:
           caption:
-            field_slide_image: '0'
             title: '0'
           optionset: single_item_slider
           class: ''
@@ -233,7 +282,7 @@ display:
           vanilla: true
           layout: ''
           cache: 0
-          admin_uri: '/admin/structure/views/ajax/display/home_page_carousel/block_1/style_options?_wrapper_format=drupal_ajax'
+          admin_uri: '/admin/structure/views/ajax/display/n/block_1/style_options?_wrapper_format=drupal_ajax'
           grid: ''
           grid_medium: ''
           grid_small: ''
@@ -279,7 +328,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_slide_image'
+        - 'config:field.storage.node.field_field_slider_image'
   block_1:
     id: block_1
     display_title: Block
@@ -287,6 +336,10 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
+      block_description: 'Home Page Carousel'
+      block_category: 'Home Page Carousel'
+      allow:
+        items_per_page: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -295,4 +348,4 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_slide_image'
+        - 'config:field.storage.node.field_field_slider_image'
