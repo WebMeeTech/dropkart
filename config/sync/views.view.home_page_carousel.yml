@@ -10,7 +10,7 @@ dependencies:
     - node
     - slick_views
     - user
-id: 'n'
+id: home_page_carousel
 label: 'Home Page Carousel'
 module: views
 description: ''
