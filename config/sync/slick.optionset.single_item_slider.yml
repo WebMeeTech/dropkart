@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: single_item_slider
 name: single_item_slider
-weight: 0
+weight: -10
 label: 'Single item slider'
 group: ''
 skin: ''
@@ -29,7 +29,7 @@ options:
     downArrowTarget: ''
     downArrowOffset: 0
     centerMode: false
-    centerPadding: 200px
+    centerPadding: 50px
     dots: true
     dotsClass: slick-dots
     appendDots: $(element)
@@ -40,7 +40,7 @@ options:
     initialSlide: 0
     lazyLoad: ondemand
     mouseWheel: false
-    randomize: false
+    randomize: true
     respondTo: window
     rtl: false
     rows: 1
@@ -56,8 +56,8 @@ options:
     touchThreshold: 5
     useCSS: true
     cssEase: ease
-    cssEaseBezier: ease
-    cssEaseOverride: ease
+    cssEaseBezier: ease-in-out
+    cssEaseOverride: swing
     useTransform: true
     easing: ''
     variableWidth: false

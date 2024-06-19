@@ -1,15 +1,18 @@
-uuid: d30213f3-3b46-48a3-9d1b-1357163487d7
+uuid: 0f3d282f-14c9-40a1-80c3-88f62b8d06b0
 langcode: en
-status: false
+status: true
 dependencies:
   config:
+    - field.storage.node.field_slide_image
+    - image.style.slick_media
     - node.type.carousel_slider
   module:
+    - media
     - node
     - slick_views
     - user
-id: carousel_home_page
-label: 'Carousel Home Page'
+id: home_page_carousel
+label: 'Home Page Carousel'
 module: views
 description: ''
 tag: ''
@@ -22,12 +25,75 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Carousel Home Page'
+      title: 'Home Page Carousel'
       fields:
         title:
           id: title
           table: node_field_data
           field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_slide_image:
+          id: field_slide_image
+          table: node__field_slide_image
+          field: field_slide_image
           relationship: none
           group_type: group
           admin_label: ''
@@ -65,7 +131,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -73,11 +139,14 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: target_id
+          type: media_thumbnail
           settings:
-            link_to_entity: true
-          group_column: value
+            image_link: ''
+            image_style: slick_media
+            image_loading:
+              attribute: lazy
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -164,12 +233,12 @@ display:
           vanilla: true
           layout: ''
           cache: 0
-          admin_uri: '/admin/structure/views/ajax/display/carousel_home_page/block_1/style_options?_wrapper_format=drupal_ajax'
+          admin_uri: '/admin/structure/views/ajax/display/home_page_carousel/block_1/style_options?_wrapper_format=drupal_ajax'
           grid: ''
           grid_medium: ''
           grid_small: ''
           style: ''
-          skin: fullscreen
+          skin: ''
           overridables:
             arrows: '0'
             autoplay: '0'
@@ -209,7 +278,8 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_slide_image'
   block_1:
     id: block_1
     display_title: Block
@@ -224,4 +294,5 @@ display:
         - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_slide_image'
