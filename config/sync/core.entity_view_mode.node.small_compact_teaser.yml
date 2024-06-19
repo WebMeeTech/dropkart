@@ -1,0 +1,11 @@
+uuid: 14081c37-af73-428f-a32f-ddaf32331dd9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.small_compact_teaser
+label: 'Small Compact Teaser'
+description: ''
+targetEntityType: node
+cache: true

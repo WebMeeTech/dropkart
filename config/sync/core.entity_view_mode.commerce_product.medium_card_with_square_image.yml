@@ -1,0 +1,11 @@
+uuid: dffc8489-2ee4-41dc-ab0f-a8347e683470
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.medium_card_with_square_image
+label: 'Medium Card With Square Image'
+description: ''
+targetEntityType: commerce_product
+cache: true

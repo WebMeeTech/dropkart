@@ -1,20 +1,17 @@
-uuid: 52670679-0ffd-4183-8363-04a116325944
+uuid: 286e8827-7dc3-44e2-8d2a-a713c204e7ff
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.commerce_product.large_compact_teaser
   module:
-    - blazy
-    - commerce_product
+    - node
     - user
-id: home_products
-label: 'Home Products'
+id: test
+label: test
 module: views
 description: ''
 tag: ''
-base_table: commerce_product_field_data
-base_field: product_id
+base_table: node_field_data
+base_field: nid
 display:
   default:
     id: default
@@ -22,17 +19,15 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Home Products'
+      title: test
       fields:
         title:
           id: title
-          table: commerce_product_field_data
+          table: node_field_data
           field: title
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: null
-          entity_field: title
           plugin_id: field
           label: ''
           exclude: false
@@ -65,9 +60,9 @@ display:
             html: false
           element_type: ''
           element_class: ''
-          element_label_type: h2
+          element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -76,12 +71,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: blazy_title
+          type: string
           settings:
-            delimiter: '|'
-            tag: small
-            break: false
-            link_to_entity: 1
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -96,7 +88,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 2
+          items_per_page: 4
       exposed_form:
         type: basic
         options:
@@ -115,14 +107,30 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
       arguments: {  }
       filters:
         status:
           id: status
-          table: commerce_product_field_data
+          table: node_field_data
           field: status
-          entity_type: commerce_product
+          entity_type: node
           entity_field: status
           plugin_id: boolean
           value: '1'
@@ -130,18 +138,9 @@ display:
           expose:
             operator: ''
       style:
-        type: grid_responsive
-        options:
-          uses_fields: false
-          columns: 2
-          cell_min_width: 100
-          grid_gutter: 10
-          alignment: horizontal
+        type: html_list
       row:
-        type: 'entity:commerce_product'
-        options:
-          relationship: none
-          view_mode: large_compact_teaser
+        type: fields
       query:
         type: views_query
         options:
@@ -151,19 +150,14 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      use_more: true
-      use_more_always: true
-      use_more_text: 'Show More'
-      link_display: custom_url
-      link_url: /all-products
       header: {  }
       footer: {  }
-      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - 'user.node_grants:view'
         - user.permissions
       tags: {  }
   block_1:
@@ -173,13 +167,11 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      block_category: '(TM) Views Examples'
-      allow:
-        items_per_page: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - 'user.node_grants:view'
         - user.permissions
       tags: {  }

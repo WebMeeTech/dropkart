@@ -1,0 +1,43 @@
+uuid: 36417920-e00a-40fe-ad42-ac4138ec633b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.medium_card_with_square_image
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_image
+    - field.field.node.article.field_tags
+    - image.style.wide
+    - node.type.article
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: br6izr-iGEu--JvNbCJNtOBpRnxpFLXfoV5y61U9Nqc
+id: node.article.medium_card_with_square_image
+targetEntityType: node
+bundle: article
+mode: medium_card_with_square_image
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: -1
+    region: content
+hidden:
+  body: true
+  comment: true
+  field_tags: true
+  links: true
