@@ -6,9 +6,11 @@ dependencies:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.field_image
+    - field.field.commerce_product.default.field_product_images
     - image.style.thumbnail
   module:
     - commerce
+    - entity_browser
     - image
     - path
     - text
@@ -27,6 +29,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -41,6 +44,20 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_product_images:
+    type: entity_browser_entity_reference
+    weight: 10
+    region: content
+    settings:
+      entity_browser: null
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
+      selection_mode: selection_append
     third_party_settings: {  }
   path:
     type: path
