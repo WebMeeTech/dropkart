@@ -1,0 +1,58 @@
+uuid: 476e22a5-52b2-4048-a192-04cc830be2c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.smart_watches
+    - field.field.commerce_product_variation.smart_watches.attribute_color
+    - field.field.commerce_product_variation.smart_watches.attribute_storage
+    - field.field.commerce_product_variation.smart_watches.field_product_image
+  module:
+    - commerce_price
+    - layout_builder
+    - layout_library
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_library:
+    enable: true
+id: commerce_product_variation.smart_watches.default
+targetEntityType: commerce_product_variation
+bundle: smart_watches
+mode: default
+content:
+  field_product_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  list_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  attribute_color: true
+  attribute_storage: true
+  layout_selection: true
+  product_id: true
+  sku: true
+  title: true

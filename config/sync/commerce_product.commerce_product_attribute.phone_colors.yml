@@ -1,0 +1,7 @@
+uuid: d9254249-d17d-47f8-8a6f-72147570cf04
+langcode: en
+status: true
+dependencies: {  }
+id: phone_colors
+label: 'Phone Colors'
+elementType: select

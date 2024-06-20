@@ -1,0 +1,29 @@
+uuid: c8be5ca9-10c0-4528-804d-e4a4351d2fb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.mobile_phones
+    - field.storage.commerce_product_variation.field_product_image
+    - media.type.image
+id: commerce_product_variation.mobile_phones.field_product_image
+field_name: field_product_image
+entity_type: commerce_product_variation
+bundle: mobile_phones
+label: product_image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

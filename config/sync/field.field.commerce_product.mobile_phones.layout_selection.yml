@@ -1,0 +1,21 @@
+uuid: 6da6fd62-287a-4f4c-872a-cdb5f458611e
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.mobile_phones
+    - field.storage.commerce_product.layout_selection
+id: commerce_product.mobile_phones.layout_selection
+field_name: layout_selection
+entity_type: commerce_product
+bundle: mobile_phones
+label: Layout
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: layout_library
+  handler_settings: {  }
+field_type: entity_reference

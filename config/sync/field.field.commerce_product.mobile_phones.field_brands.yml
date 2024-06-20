@@ -1,0 +1,29 @@
+uuid: 823e3037-39b5-4a65-af47-fc5237d9ee3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.mobile_phones
+    - field.storage.commerce_product.field_brands
+    - taxonomy.vocabulary.smart_phone_brands
+id: commerce_product.mobile_phones.field_brands
+field_name: field_brands
+entity_type: commerce_product
+bundle: mobile_phones
+label: brands
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      smart_phone_brands: smart_phone_brands
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

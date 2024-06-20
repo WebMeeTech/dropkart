@@ -1,0 +1,47 @@
+uuid: ffd39f57-9d34-4382-a1df-cb4d5d68f6d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.mobile_phones
+    - core.entity_view_mode.commerce_product.large_compact_teaser
+    - field.field.commerce_product.mobile_phones.body
+    - field.field.commerce_product.mobile_phones.field_brands
+    - field.field.commerce_product.mobile_phones.field_image
+    - field.field.commerce_product.mobile_phones.field_price
+    - field.field.commerce_product.mobile_phones.layout_selection
+  module:
+    - image
+id: commerce_product.mobile_phones.large_compact_teaser
+targetEntityType: commerce_product
+bundle: mobile_phones
+mode: large_compact_teaser
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+hidden:
+  body: true
+  created: true
+  field_brands: true
+  field_price: true
+  layout_selection: true
+  stores: true
+  uid: true
+  variations: true

@@ -1,0 +1,29 @@
+uuid: 86da0e93-7570-4e7e-9e56-86fcf0c615b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.smart_watches
+    - field.storage.node.field_product
+    - node.type.product_display
+id: node.product_display.field_product
+field_name: field_product
+entity_type: node
+bundle: product_display
+label: product
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product_variation'
+  handler_settings:
+    target_bundles:
+      smart_watches: smart_watches
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

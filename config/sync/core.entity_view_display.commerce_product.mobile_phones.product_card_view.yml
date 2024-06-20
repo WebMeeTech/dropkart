@@ -1,0 +1,55 @@
+uuid: fa192f02-c965-40db-b9d0-a65ae24b71c9
+langcode: en
+status: false
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.mobile_phones
+    - core.entity_view_mode.commerce_product.product_card_view
+    - field.field.commerce_product.mobile_phones.body
+    - field.field.commerce_product.mobile_phones.field_brands
+    - field.field.commerce_product.mobile_phones.field_image
+    - field.field.commerce_product.mobile_phones.field_price
+    - field.field.commerce_product.mobile_phones.layout_selection
+  module:
+    - commerce_product
+    - image
+id: commerce_product.mobile_phones.product_card_view
+targetEntityType: commerce_product
+bundle: mobile_phones
+mode: product_card_view
+content:
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  created: true
+  field_brands: true
+  field_price: true
+  layout_selection: true
+  stores: true
+  uid: true

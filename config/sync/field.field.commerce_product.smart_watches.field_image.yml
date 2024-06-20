@@ -1,0 +1,38 @@
+uuid: 90e90bba-4dc4-474f-be45-f98b75caa490
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.smart_watches
+    - field.storage.commerce_product.field_image
+  module:
+    - image
+id: commerce_product.smart_watches.field_image
+field_name: field_image
+entity_type: commerce_product
+bundle: smart_watches
+label: image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: 500x500
+  min_resolution: 300x300
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

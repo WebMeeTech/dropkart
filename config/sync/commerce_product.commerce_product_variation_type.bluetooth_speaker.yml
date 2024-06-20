@@ -1,0 +1,10 @@
+uuid: 95a3aff3-2b12-4130-8fc5-0cbfb4fcb0d9
+langcode: en
+status: true
+dependencies: {  }
+id: bluetooth_speaker
+label: 'Bluetooth Speaker'
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: null

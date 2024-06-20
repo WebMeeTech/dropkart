@@ -1,0 +1,7 @@
+uuid: 550a88d5-032c-46c8-bd2c-f2d047adb918
+langcode: en
+status: true
+dependencies: {  }
+id: storage
+label: Storage
+elementType: select

@@ -1,0 +1,10 @@
+uuid: 4046ad71-1a16-4d90-bc10-c8363054fc95
+langcode: en
+status: true
+dependencies: {  }
+id: mobile_phones
+label: 'Mobile Phones'
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: false
