@@ -1,0 +1,77 @@
+uuid: beb013b0-de96-4f98-9be6-08ae069f16a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.ladies_clothing
+    - field.field.commerce_product.ladies_clothing.body
+    - field.field.commerce_product.ladies_clothing.field_product_images
+    - field.field.commerce_product.ladies_clothing.field_product_price
+    - field.field.commerce_product.ladies_clothing.field_type
+    - image.style.large
+  module:
+    - commerce_price
+    - commerce_product
+    - media
+    - text
+id: commerce_product.ladies_clothing.default
+targetEntityType: commerce_product
+bundle: ladies_clothing
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_product_images:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: media
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_product_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  created: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

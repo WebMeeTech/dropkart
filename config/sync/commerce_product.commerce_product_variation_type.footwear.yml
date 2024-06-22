@@ -1,0 +1,10 @@
+uuid: 0b0d5db3-e27a-4c9e-a38d-5f106e0e1d29
+langcode: en
+status: true
+dependencies: {  }
+id: footwear
+label: Footwear
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: null

@@ -90,7 +90,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 4
+          items_per_page: 1
       exposed_form:
         type: basic
         options:
@@ -129,8 +129,8 @@ display:
           default_row_class: false
           uses_fields: false
           type: ul
-          wrapper_class: 'grid--2-columns grid-lg--4-columns'
-          class: ''
+          wrapper_class: teaser--bordered
+          class: teaser--medium-card-square-image
       row:
         type: 'entity:commerce_product'
         options:

@@ -1,0 +1,15 @@
+uuid: 3e833bbf-f32f-45a3-b1b8-c108cce43be4
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: products_store
+name: 'Products Store'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words
+  phrase: bigram

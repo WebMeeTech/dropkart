@@ -1,0 +1,7 @@
+uuid: 1b7ae018-9ae2-40f1-8d83-2e752aba9ae2
+langcode: en
+status: true
+dependencies: {  }
+id: waist_size
+label: 'Waist Size'
+elementType: select

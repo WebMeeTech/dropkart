@@ -10,7 +10,7 @@ dependencies:
     - commerce_product
     - search_api
 id: product_index
-name: 'Product Index'
+name: 'Product Index_old'
 description: ''
 read_only: false
 field_settings:

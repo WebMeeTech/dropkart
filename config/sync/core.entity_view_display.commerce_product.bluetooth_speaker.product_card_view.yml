@@ -6,6 +6,7 @@ dependencies:
     - commerce_product.commerce_product_type.bluetooth_speaker
     - core.entity_view_mode.commerce_product.product_card_view
     - field.field.commerce_product.bluetooth_speaker.body
+    - field.field.commerce_product.bluetooth_speaker.field_brands
     - field.field.commerce_product.bluetooth_speaker.field_image
   module:
     - commerce_product
@@ -45,5 +46,7 @@ content:
 hidden:
   body: true
   created: true
+  field_brands: true
+  search_api_excerpt: true
   stores: true
   uid: true

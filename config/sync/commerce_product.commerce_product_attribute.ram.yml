@@ -1,0 +1,7 @@
+uuid: 0ca1774a-83d9-4fd1-b02a-0c074ec8099a
+langcode: en
+status: true
+dependencies: {  }
+id: ram
+label: RAM
+elementType: select

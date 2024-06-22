@@ -1,0 +1,10 @@
+uuid: 2fd9a6e0-5ff4-42cb-9979-614050c8d7e9
+langcode: en
+status: true
+dependencies: {  }
+id: men_s_clothing
+label: "Men's Clothing"
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: false

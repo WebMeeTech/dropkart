@@ -34,6 +34,7 @@ module:
   entity: 0
   entity_browser: 0
   entity_browser_entity_form: 0
+  entity_browser_example: 0
   entity_reference_revisions: 0
   field: 0
   field_formatter: 0
@@ -51,6 +52,8 @@ module:
   link: 0
   media: 0
   media_entity_browser: 0
+  media_entity_browser_media_library: 0
+  media_library: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0

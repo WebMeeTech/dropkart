@@ -6,7 +6,6 @@ dependencies:
     - commerce_product.commerce_product_variation_type.mobile_phones
     - field.field.commerce_product_variation.mobile_phones.attribute_phone_colors
     - field.field.commerce_product_variation.mobile_phones.attribute_storage
-    - field.field.commerce_product_variation.mobile_phones.field_product_image
   module:
     - commerce_price
 id: commerce_product_variation.mobile_phones.default
@@ -14,15 +13,6 @@ targetEntityType: commerce_product_variation
 bundle: mobile_phones
 mode: default
 content:
-  field_product_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: -1
-    region: content
   list_price:
     type: commerce_price_default
     label: above
@@ -45,5 +35,6 @@ hidden:
   attribute_phone_colors: true
   attribute_storage: true
   product_id: true
+  search_api_excerpt: true
   sku: true
   title: true

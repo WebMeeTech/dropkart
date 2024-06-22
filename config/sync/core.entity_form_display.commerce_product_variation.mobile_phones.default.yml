@@ -6,10 +6,8 @@ dependencies:
     - commerce_product.commerce_product_variation_type.mobile_phones
     - field.field.commerce_product_variation.mobile_phones.attribute_phone_colors
     - field.field.commerce_product_variation.mobile_phones.attribute_storage
-    - field.field.commerce_product_variation.mobile_phones.field_product_image
   module:
     - commerce_price
-    - inline_entity_form
 id: commerce_product_variation.mobile_phones.default
 targetEntityType: commerce_product_variation
 bundle: mobile_phones
@@ -26,19 +24,6 @@ content:
     weight: 2
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_product_image:
-    type: inline_entity_form_simple
-    weight: 1
-    region: content
-    settings:
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      collapsible: false
-      collapsed: false
-      revision: false
     third_party_settings: {  }
   list_price:
     type: commerce_list_price

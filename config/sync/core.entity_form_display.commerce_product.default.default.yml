@@ -5,13 +5,13 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
-    - field.field.commerce_product.default.field_image
     - field.field.commerce_product.default.field_product_images
-    - image.style.thumbnail
+    - field.field.commerce_product.default.field_product_price
   module:
     - commerce
-    - entity_browser
-    - image
+    - commerce_price
+    - commerce_product
+    - inline_entity_form
     - path
     - text
 _core:
@@ -37,27 +37,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 9
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
   field_product_images:
-    type: entity_browser_entity_reference
+    type: inline_entity_form_simple
     weight: 10
     region: content
     settings:
-      entity_browser: null
-      field_widget_display: label
-      field_widget_edit: true
-      field_widget_remove: true
-      field_widget_replace: false
-      open: false
-      field_widget_display_settings: {  }
-      selection_mode: selection_append
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  field_product_price:
+    type: commerce_price_default
+    weight: 12
+    region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
@@ -100,5 +97,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  variations: true
+  variations:
+    type: commerce_product_single_variation
+    weight: 13
+    region: content
+    settings:
+      form_mode: default
+      field_title_text: 'Product information'
+    third_party_settings: {  }
+hidden: {  }

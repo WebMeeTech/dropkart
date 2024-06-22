@@ -5,139 +5,19 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.default
     - field.field.commerce_product.default.body
-    - field.field.commerce_product.default.field_image
     - field.field.commerce_product.default.field_product_images
+    - field.field.commerce_product.default.field_product_price
   module:
     - commerce_product
-    - image
     - layout_builder
-    - layout_discovery
+    - layout_library
     - text
 third_party_settings:
   layout_builder:
-    enabled: true
+    enabled: false
     allow_custom: false
-    sections:
-      -
-        layout_id: layout_twocol_section
-        layout_settings:
-          label: ''
-          context_mapping: {  }
-          column_widths: 50-50
-        components:
-          9a01ee98-69e4-40da-97fe-ecfdb07160a8:
-            uuid: 9a01ee98-69e4-40da-97fe-ecfdb07160a8
-            region: first
-            configuration:
-              id: 'field_block:commerce_product:default:field_image'
-              label: image
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: image
-                label: hidden
-                settings:
-                  image_link: ''
-                  image_style: ''
-                  image_loading:
-                    attribute: lazy
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
-          e18eaa24-1a64-496c-b4d5-72f520641b14:
-            uuid: e18eaa24-1a64-496c-b4d5-72f520641b14
-            region: first
-            configuration:
-              id: 'field_block:commerce_product:default:title'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          cc9183d3-3edf-4198-b7a9-d15dd108e335:
-            uuid: cc9183d3-3edf-4198-b7a9-d15dd108e335
-            region: second
-            configuration:
-              id: 'field_block:commerce_product:default:variations'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: commerce_add_to_cart
-                label: hidden
-                settings:
-                  combine: true
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
-          f8e4d8cb-1f03-4f6f-a95a-6d72fe419e2f:
-            uuid: f8e4d8cb-1f03-4f6f-a95a-6d72fe419e2f
-            region: second
-            configuration:
-              id: 'field_block:commerce_product:default:body'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          19d675c6-504e-4cb5-9a7d-33e0c71d0215:
-            uuid: 19d675c6-504e-4cb5-9a7d-33e0c71d0215
-            region: second
-            configuration:
-              id: 'field_block:commerce_product_variation:default:price'
-              label: Price
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: '@commerce_product.product_variation_route_context:commerce_product_variation'
-                view_mode: view_mode
-              formatter:
-                type: commerce_price_default
-                label: hidden
-                settings:
-                  strip_trailing_zeroes: false
-                  currency_display: code
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          4447ed1a-90a4-4f1b-bd5e-211a82e576d1:
-            uuid: 4447ed1a-90a4-4f1b-bd5e-211a82e576d1
-            region: first
-            configuration:
-              id: 'field_block:commerce_product:default:field_product_images'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_entity_view
-                label: above
-                settings:
-                  view_mode: default
-                  link: false
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components: {  }
-        third_party_settings: {  }
+  layout_library:
+    enable: false
 _core:
   default_config_hash: 10qgl6V_HwkrJufzsNCV75OpqOeMzzKDJb3BhaogmzQ
 id: commerce_product.default.default
@@ -150,7 +30,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_image:
     type: image
@@ -164,14 +44,13 @@ content:
     weight: 2
     region: content
   field_product_images:
-    type: entity_reference_entity_view
-    label: above
+    type: entity_reference_label
+    label: hidden
     settings:
-      view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 3
-    region: first
+    weight: 0
+    region: content
   title:
     type: string
     label: hidden
@@ -186,10 +65,11 @@ content:
     settings:
       combine: true
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
 hidden:
   created: true
+  field_product_price: true
   layout_builder__layout: true
   search_api_excerpt: true
   stores: true
