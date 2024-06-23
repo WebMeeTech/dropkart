@@ -1,0 +1,25 @@
+uuid: 63175878-e854-4be7-9518-ff625b0b43c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.electronics
+    - field.storage.commerce_product.field_brand
+id: commerce_product.electronics.field_brand
+field_name: field_brand
+entity_type: commerce_product
+bundle: electronics
+label: Brand
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: brand_types
+      display_name: electronic_brands
+      arguments: {  }
+field_type: entity_reference

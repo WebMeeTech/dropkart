@@ -1,0 +1,24 @@
+uuid: 86b22802-a8c7-4132-9b0a-14229aa0e9be
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.footwear_and_clothing
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.footwear_and_clothing.body
+field_name: body
+entity_type: commerce_product
+bundle: footwear_and_clothing
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -1,0 +1,86 @@
+uuid: e01819ab-7b04-4095-a986-ce606cfbcd7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.footwear_and_clothing
+    - field.field.commerce_product.footwear_and_clothing.body
+    - field.field.commerce_product.footwear_and_clothing.field_brand
+    - field.field.commerce_product.footwear_and_clothing.field_category
+    - field.field.commerce_product.footwear_and_clothing.field_product_images
+    - field.field.commerce_product.footwear_and_clothing.field_product_price
+    - image.style.large
+  module:
+    - commerce_price
+    - commerce_product
+    - media
+    - text
+id: commerce_product.footwear_and_clothing.default
+targetEntityType: commerce_product
+bundle: footwear_and_clothing
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_brand:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_product_images:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_product_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  created: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

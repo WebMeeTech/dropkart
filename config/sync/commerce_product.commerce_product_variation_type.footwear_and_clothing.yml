@@ -1,0 +1,10 @@
+uuid: 07892090-7586-4f0e-a10b-69852307cd09
+langcode: en
+status: true
+dependencies: {  }
+id: footwear_and_clothing
+label: 'Footwear and Clothing'
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: false

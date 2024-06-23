@@ -1,0 +1,10 @@
+uuid: fc809972-3758-46fb-94a7-22d5db1ae7c5
+langcode: en
+status: true
+dependencies: {  }
+id: electronics
+label: Electronics
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: false

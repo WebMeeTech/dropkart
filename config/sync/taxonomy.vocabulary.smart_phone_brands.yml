@@ -1,8 +1,0 @@
-uuid: f95d8e1f-257e-4509-9ada-f5d3e0b60348
-langcode: en
-status: true
-dependencies: {  }
-name: 'Smart Phone Brands'
-vid: smart_phone_brands
-description: ''
-weight: 0

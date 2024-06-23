@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - commerce_product.commerce_product_variation_type.smart_watches
     - field.storage.node.field_product
     - node.type.product_display
 id: node.product_display.field_product
@@ -19,8 +18,7 @@ default_value_callback: ''
 settings:
   handler: 'default:commerce_product_variation'
   handler_settings:
-    target_bundles:
-      smart_watches: smart_watches
+    target_bundles: {  }
     sort:
       field: _none
       direction: ASC

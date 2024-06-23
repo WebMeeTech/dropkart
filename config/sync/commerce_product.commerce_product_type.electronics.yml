@@ -1,0 +1,14 @@
+uuid: c60a364d-fbf5-404a-b61f-b909c1ec0b78
+langcode: en
+status: true
+dependencies: {  }
+id: electronics
+label: Electronics
+traits: {  }
+locked: false
+description: ''
+variationType: electronics
+variationTypes:
+  - electronics
+multipleVariations: true
+injectVariationFields: true

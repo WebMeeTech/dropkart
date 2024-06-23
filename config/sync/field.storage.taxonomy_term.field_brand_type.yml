@@ -1,16 +1,16 @@
-uuid: 0e653e82-dfd7-4882-9424-7dcf2b36bd2a
+uuid: caf5c92a-b2b4-4eb0-9461-e369f6ae0571
 langcode: en
 status: true
 dependencies:
   module:
     - commerce_product
     - taxonomy
-id: commerce_product.field_brand
-field_name: field_brand
-entity_type: commerce_product
+id: taxonomy_term.field_brand_type
+field_name: field_brand_type
+entity_type: taxonomy_term
 type: entity_reference
 settings:
-  target_type: taxonomy_term
+  target_type: commerce_product_type
 module: core
 locked: false
 cardinality: 1

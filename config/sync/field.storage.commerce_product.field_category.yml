@@ -1,12 +1,12 @@
-uuid: 0e653e82-dfd7-4882-9424-7dcf2b36bd2a
+uuid: f9aa40f9-7a0f-4ffc-8239-7f842fdc2cfc
 langcode: en
 status: true
 dependencies:
   module:
     - commerce_product
     - taxonomy
-id: commerce_product.field_brand
-field_name: field_brand
+id: commerce_product.field_category
+field_name: field_category
 entity_type: commerce_product
 type: entity_reference
 settings:

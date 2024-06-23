@@ -1,11 +1,11 @@
-uuid: f22dd33b-7160-471f-b8ef-24d6ef8e44e2
+uuid: 1adf9dd8-5ca1-4a4d-91e2-fe4f294f1849
 langcode: en
 status: true
 dependencies:
   module:
     - search_api_db
 id: product_store
-name: 'Product Store_old'
+name: 'Product Store'
 description: ''
 backend: search_api_db
 backend_config:

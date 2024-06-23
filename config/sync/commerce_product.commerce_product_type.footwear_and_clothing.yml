@@ -1,0 +1,14 @@
+uuid: 604241b3-9272-473a-b259-5a6dbf050272
+langcode: en
+status: true
+dependencies: {  }
+id: footwear_and_clothing
+label: 'Footwear and Clothing'
+traits: {  }
+locked: false
+description: ''
+variationType: footwear_and_clothing
+variationTypes:
+  - footwear_and_clothing
+multipleVariations: true
+injectVariationFields: true

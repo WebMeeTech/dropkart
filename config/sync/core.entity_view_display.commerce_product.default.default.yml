@@ -7,10 +7,12 @@ dependencies:
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.field_product_images
     - field.field.commerce_product.default.field_product_price
+    - image.style.large
   module:
     - commerce_product
     - layout_builder
     - layout_library
+    - media
     - text
 third_party_settings:
   layout_builder:
@@ -44,10 +46,13 @@ content:
     weight: 2
     region: content
   field_product_images:
-    type: entity_reference_label
+    type: media_thumbnail
     label: hidden
     settings:
-      link: false
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
