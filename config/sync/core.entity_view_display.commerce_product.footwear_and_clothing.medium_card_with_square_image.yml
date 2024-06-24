@@ -1,9 +1,10 @@
-uuid: e01819ab-7b04-4095-a986-ce606cfbcd7e
+uuid: a2b93464-4ab5-4b4c-abd1-b98c064ea5bd
 langcode: en
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.footwear_and_clothing
+    - core.entity_view_mode.commerce_product.medium_card_with_square_image
     - field.field.commerce_product.footwear_and_clothing.body
     - field.field.commerce_product.footwear_and_clothing.field_brand
     - field.field.commerce_product.footwear_and_clothing.field_category
@@ -11,12 +12,17 @@ dependencies:
     - image.style.large
   module:
     - commerce_product
+    - layout_builder
     - media
     - text
-id: commerce_product.footwear_and_clothing.default
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: commerce_product.footwear_and_clothing.medium_card_with_square_image
 targetEntityType: commerce_product
 bundle: footwear_and_clothing
-mode: default
+mode: medium_card_with_square_image
 content:
   body:
     type: text_default

@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.commerce_product.body
-    - field.storage.commerce_product.field_product_price
     - field.storage.commerce_product.field_product_images
+    - field.storage.commerce_product.field_product_price
     - search_api.server.product_store
   module:
     - commerce_product

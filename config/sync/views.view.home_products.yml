@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.commerce_product.large_compact_teaser
+    - core.entity_view_mode.commerce_product.single_card_preview
   module:
     - blazy
     - commerce_product
@@ -141,7 +141,7 @@ display:
         type: 'entity:commerce_product'
         options:
           relationship: none
-          view_mode: large_compact_teaser
+          view_mode: single_card_preview
       query:
         type: views_query
         options:
