@@ -10,6 +10,7 @@ dependencies:
     - field.field.commerce_product.footwear_and_clothing.field_product_images
   module:
     - commerce
+    - commerce_product
     - media_library
     - path
     - text
@@ -94,5 +95,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  variations: true
+  variations:
+    type: commerce_product_single_variation
+    weight: 0
+    region: content
+    settings:
+      form_mode: default
+      field_title_text: 'Product information'
+    third_party_settings: {  }
+hidden: {  }

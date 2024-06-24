@@ -9,6 +9,7 @@ locked: false
 description: ''
 variationType: footwear_and_clothing
 variationTypes:
+  - default
   - footwear_and_clothing
 multipleVariations: true
 injectVariationFields: true

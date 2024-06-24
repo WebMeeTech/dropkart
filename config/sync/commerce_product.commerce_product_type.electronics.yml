@@ -9,6 +9,7 @@ locked: false
 description: ''
 variationType: electronics
 variationTypes:
+  - default
   - electronics
 multipleVariations: true
 injectVariationFields: true
