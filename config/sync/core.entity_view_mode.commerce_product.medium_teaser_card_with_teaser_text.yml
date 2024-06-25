@@ -1,0 +1,11 @@
+uuid: 860a02b5-d782-4681-95fb-50bf03ae2838
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.medium_teaser_card_with_teaser_text
+label: 'Medium Teaser Card With Teaser Text'
+description: ''
+targetEntityType: commerce_product
+cache: true

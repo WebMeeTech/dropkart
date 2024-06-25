@@ -1,0 +1,56 @@
+uuid: abef99ca-51d6-4dc2-93f6-98d49d18ecb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.electronics
+    - core.entity_view_mode.commerce_product.medium_teaser_card_with_teaser_text
+    - field.field.commerce_product.electronics.body
+    - field.field.commerce_product.electronics.field_brand
+    - field.field.commerce_product.electronics.field_category
+    - field.field.commerce_product.electronics.field_product_images
+  module:
+    - field_formatter
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: commerce_product.electronics.medium_teaser_card_with_teaser_text
+targetEntityType: commerce_product
+bundle: electronics
+mode: medium_teaser_card_with_teaser_text
+content:
+  field_product_images:
+    type: field_formatter_with_inline_settings
+    label: hidden
+    settings:
+      field_name: field_media_image
+      type: image
+      settings:
+        image_link: ''
+        image_style: large
+        image_loading:
+          attribute: lazy
+      label: hidden
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+hidden:
+  body: true
+  created: true
+  field_brand: true
+  field_category: true
+  search_api_excerpt: true
+  stores: true
+  uid: true
+  variations: true

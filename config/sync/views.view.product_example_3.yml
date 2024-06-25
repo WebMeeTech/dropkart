@@ -1,14 +1,14 @@
-uuid: 2785be6c-6771-48b2-a26f-91c220e0b826
+uuid: ccf412fb-e1f1-4989-8fb1-749205e5caf9
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.commerce_product.small_compact_teaser
+    - core.entity_view_mode.commerce_product.medium_teaser_card_with_teaser_text
   module:
     - commerce_product
     - user
-id: featured_products_4_col
-label: 'Featured products (4 col.) '
+id: product_example_3
+label: 'Product Example 3'
 module: views
 description: ''
 tag: ''
@@ -21,7 +21,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Featured products (4 col.)'
+      title: 'Featured Products - Home'
       fields:
         title:
           id: title
@@ -91,7 +91,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 4
+          items_per_page: 3
       exposed_form:
         type: basic
         options:
@@ -127,17 +127,17 @@ display:
       style:
         type: html_list
         options:
+          grouping: {  }
           row_class: ''
-          default_row_class: false
-          uses_fields: false
+          default_row_class: true
           type: ul
-          wrapper_class: 'grid--2-columns grid-lg--4-columns'
+          wrapper_class: 'list grid-md--2-columns'
           class: ''
       row:
         type: 'entity:commerce_product'
         options:
           relationship: none
-          view_mode: small_compact_teaser
+          view_mode: medium_teaser_card_with_teaser_text
       query:
         type: views_query
         options:
@@ -147,6 +147,12 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: ''
+      use_more: true
+      use_more_always: true
+      use_more_text: More
+      link_display: custom_url
+      link_url: /products
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -157,16 +163,16 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags: {  }
-  block_1:
-    id: block_1
+  featured_products_home:
+    id: featured_products_home
     display_title: Block
     display_plugin: block
     position: 1
     display_options:
       display_extenders: {  }
-      block_description: 'Featured products (4 col.)'
+      block_category: 'Featured Products - Home'
       allow:
-        items_per_page: false
+        items_per_page: true
     cache_metadata:
       max-age: -1
       contexts:

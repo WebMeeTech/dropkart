@@ -8,6 +8,8 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - field.field.node.article.field_teaser_media
+    - field.field.node.article.field_teaser_text
     - node.type.article
   module:
     - user
@@ -26,3 +28,6 @@ hidden:
   comment: true
   field_image: true
   field_tags: true
+  field_teaser_media: true
+  field_teaser_text: true
+  search_api_excerpt: true

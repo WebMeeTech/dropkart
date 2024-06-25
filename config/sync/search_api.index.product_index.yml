@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.commerce_product.body
     - field.storage.commerce_product.field_product_images
-    - field.storage.commerce_product.field_product_price
     - search_api.server.product_store
   module:
     - commerce_product
@@ -42,17 +41,25 @@ field_settings:
       module:
         - commerce_product
   number:
-    label: 'Price » Number'
+    label: 'Default variation » Product variation » Price » Number'
     datasource_id: 'entity:commerce_product'
-    property_path: 'field_product_price:number'
-    type: string
+    property_path: 'default_variation:entity:price:number'
+    type: integer
     dependencies:
-      config:
-        - field.storage.commerce_product.field_product_price
+      module:
+        - commerce_product
   number_1:
     label: 'Price » Number'
     datasource_id: 'entity:commerce_product_variation'
     property_path: 'price:number'
+    type: string
+    dependencies:
+      module:
+        - commerce_product
+  number_2:
+    label: 'Variations » Product variation » Price » Number'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'variations:entity:price:number'
     type: string
     dependencies:
       module:
@@ -137,7 +144,6 @@ processor_settings:
     fields:
       - body
       - name
-      - number
       - number_1
       - sku
       - title
@@ -159,7 +165,6 @@ processor_settings:
     fields:
       - body
       - name
-      - number
       - number_1
       - sku
       - title
