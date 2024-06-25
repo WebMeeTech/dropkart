@@ -1,22 +1,23 @@
 {#
 /**
  * @file
- * Small Compact Teaser
+ * Medium teaser card with teaser text
  */
 #}
 
 {% extends 'node--teaser.html.twig' %}
 
 {% set teaser_classes = [
-  'teaser--compact',
-  'teaser--small-compact'
+  'teaser--card',
+  'teaser--medium-card'
 ] %}
 
 {% set attributes = attributes.addClass(teaser_classes) %}
 
+
 {% block teaser_content %}
-<div class="teaser--compact">
   {{ product.field_product_images }}
   {{ product.title }}
-</div>
+  {{ price }}
+
 {% endblock %}
