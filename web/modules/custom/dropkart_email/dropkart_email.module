@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * Implements hook_mail_alter().
+ */
+function dropkart_email_mail_alter(array &$message) {
+  // Check if the email is the commerce_order_receipt email.
+  if ($message['key'] === 'commerce_order_receipt') {
+    // Retrieve order details from message variables.
+    $order = $message['params']['order'];
+
+    // Fetch token replacements using token_replace().
+    $replacements = [
+      'order_details' => token_replace('[dropkart_email][order_details]', ['commerce_order' => $order]),
+    ];
+
+    // Replace placeholders in message['body'] with token replacements.
+    $message['body'] = strtr($message['body'], $replacements);
+
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function dropkart_email_theme($existing, $type, $theme, $path)
+{
+    return [
+    'my_custom_template' => [
+      'template' => 'my-custom-template',
+      'variables' => ['order_details' => NULL, 'total' => NULL, 'quantity' => NULL, 'item_text' => NULL, 'unit_price' => NULL, 'subtotal' => NULL, 'order_nu' => NULL],
+    ],
+  ];
+}
+//return [
+//  'my_custom_template' => [
+//    'template' => 'my-custom-template',
+//    'variables' => ['order_details' => NULL],
+//  ],
+//];

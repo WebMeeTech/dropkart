@@ -1,0 +1,20 @@
+dropkart_email.custom_page:
+  path: '/my-custom-page/{order}'
+  defaults:
+    _controller: '\Drupal\dropkart_email\Controller\DropKartController::customPage'
+    _title: 'My Custom Page'
+  requirements:
+    _permission: 'access content'
+    order: '\d+'
+  options:
+    parameters:
+      order:
+        type: entity:commerce_order
+
+#dropkart_email.custom_page:
+#  path: '/my-custom-page'
+#  defaults:
+#    _controller: '\Drupal\dropkart_email\Controller\DropKartController::customPage'
+#    _title: 'My Custom Page'
+#  requirements:
+#    _permission: 'access content'

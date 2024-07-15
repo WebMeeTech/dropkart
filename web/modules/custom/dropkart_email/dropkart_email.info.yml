@@ -1,0 +1,9 @@
+name: 'Dropkart Email'
+type: module
+description: 'Customizes the email body for order notifications.'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:commerce
+
+
