@@ -5,15 +5,15 @@ dependencies: {  }
 id: order_placed_email
 label: 'Order Placed Email'
 from: isururaveen4520@gmail.com
-toType: role
-to: isururaveen4520@gmail.com
+toType: email
+to: isururaveenvanced@gmail.com
 toRole: administrator
 cc: ''
 bcc: ''
 replyTo: ''
 subject: 'Order #[commerce_order:order_id] Confirmed ! - DropKart Store'
 body:
-  value: '<h2>Thank you for your purchase!</h2><p>ORDER #<a href="javascript:void(0);">[commerce_order:order_id]</a></p><p>We''re getting your order ready for shipping. You will be notified when it has been sent.</p><p>Note: This email serves as your official purchase invoice from DropKart Store</p><p>&nbsp;</p><p><strong>Order Summary</strong></p><p>[commerce_order:order_items]</p><p>Total Price : [commerce_order:total_price]</p><p>&nbsp;</p><p><strong>Customer Information</strong><br>[commerce_order:billing_profile]</p><p>&nbsp;</p><p><strong>Billing Address</strong></p><p>[commerce_order:billing_profile]</p><p>&nbsp;</p><p>If you have any questions, reply to this email or contact us at <a href="javascript:void(0);">[site:mail]</a></p><p>&nbsp;</p><p>&nbsp;</p>'
+  value: '<h2>&nbsp;</h2><p>&nbsp;</p><p>[dropkart_email:item_text]</p><p>[dropkart_email:unit_price]</p><p>[dropkart_email:quantity]</p><p>[dropkart_email:subtotal]</p><p>[dropkart_email:total]</p><p>[dropkart_email:order_details]</p><p>[commerce_order:mail]</p><p>Billing : [commerce_order:billing_profile]</p>'
   format: basic_html
 conditions: {  }
 conditionOperator: AND
