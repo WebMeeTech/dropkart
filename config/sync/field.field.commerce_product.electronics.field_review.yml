@@ -1,0 +1,29 @@
+uuid: 1ca24952-54b0-4a26-bf4d-e4b92c2266e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.electronics
+    - field.storage.commerce_product.field_review
+  module:
+    - fivestar
+id: commerce_product.electronics.field_review
+field_name: field_review
+entity_type: commerce_product
+bundle: electronics
+label: Review
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  stars: 5
+  allow_clear: false
+  allow_revote: true
+  allow_ownvote: true
+  rated_while: viewing
+  enable_voting_target: false
+  target_bridge_field: ''
+  target_fivestar_field: ''
+field_type: fivestar
