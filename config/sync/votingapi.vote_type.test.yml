@@ -1,0 +1,8 @@
+uuid: 94e69b21-ddfe-45f4-9123-8acd5f4e7777
+langcode: en
+status: true
+dependencies: {  }
+id: test
+label: test
+value_type: 'Fivestar rating'
+description: ''

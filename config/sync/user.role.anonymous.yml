@@ -10,9 +10,11 @@ dependencies:
     - commerce_product
     - contact
     - filter
+    - fivestar
     - media
     - search
     - system
+    - votingapi
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
@@ -24,6 +26,10 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'administer vote types'
+  - 'administer voting api'
+  - 'delete votes'
+  - 'rate content'
   - 'search content'
   - 'use text format restricted_html'
   - 'view commerce_product'

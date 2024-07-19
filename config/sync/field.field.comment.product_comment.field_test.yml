@@ -1,0 +1,29 @@
+uuid: aaf6e959-0a39-4deb-b034-c1bf0fa2dc2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.product_comment
+    - field.storage.comment.field_test
+  module:
+    - fivestar
+id: comment.product_comment.field_test
+field_name: field_test
+entity_type: comment
+bundle: product_comment
+label: test
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  stars: 5
+  allow_clear: true
+  allow_revote: true
+  allow_ownvote: true
+  rated_while: viewing
+  enable_voting_target: false
+  target_bridge_field: ''
+  target_fivestar_field: ''
+field_type: fivestar

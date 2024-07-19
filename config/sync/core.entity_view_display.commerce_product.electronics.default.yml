@@ -23,7 +23,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_brand:
     type: entity_reference_label
@@ -31,7 +31,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 12
+    weight: 4
     region: content
   field_category:
     type: entity_reference_label
@@ -39,7 +39,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 13
+    weight: 5
     region: content
   field_product_images:
     type: media_thumbnail
@@ -50,7 +50,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 0
+    weight: 2
     region: content
   title:
     type: string
@@ -58,7 +58,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -5
+    weight: 0
     region: content
   variations:
     type: commerce_add_to_cart
@@ -66,7 +66,7 @@ content:
     settings:
       combine: true
     third_party_settings: {  }
-    weight: 10
+    weight: 3
     region: content
 hidden:
   created: true

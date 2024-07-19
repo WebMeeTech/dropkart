@@ -1,0 +1,13 @@
+uuid: 27e184eb-afcf-492f-b8b4-dcb530e9d7e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - product_review
+_core:
+  default_config_hash: FuLXrYCE3IG6R2MY7ggRPkLJnbJqxaOCuzjj5xAgJgY
+id: product_review_delete_action
+label: 'Delete product reviews'
+type: product_review
+plugin: 'entity:delete_action:product_review'
+configuration: {  }

@@ -1,0 +1,30 @@
+uuid: 21f7bc20-7552-4ce6-8ecd-6e375f2c709e
+langcode: en
+status: true
+dependencies:
+  module:
+    - fivestar
+    - product_review
+    - text
+id: product_review.product_review.default
+targetEntityType: product_review
+bundle: product_review
+mode: default
+content:
+  comment:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  rating:
+    type: fivestar_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true
