@@ -87,9 +87,10 @@ final class ProductReview extends ContentEntityBase implements ProductReviewInte
     $fields['rating'] = BaseFieldDefinition::create('fivestar')
 //      ->setTranslatable(TRUE)
       ->setLabel(t('Rating'))
+      ->set
       ->setRequired(FALSE)
 //      ->setSetting('max_length', 255)
-//        ->setSetting('vote_type', 'fivestar')
+//        ->setSetting('target_type', 'fivestar')
       ->setDefaultValue(3)
       ->setDisplayOptions('form', [
         'type' => 'string_textfield',
@@ -159,6 +160,13 @@ final class ProductReview extends ContentEntityBase implements ProductReviewInte
       ->setLabel(t('Changed'))
       ->setTranslatable(TRUE)
       ->setDescription(t('The time that the product review was last edited.'));
+
+//    $fields['target'] = BaseFieldDefinition::create('target')
+//      ->setLabel(t('Changed'))
+//      ->setSetting('target_type', 'target')
+////      ->setDefaultValue(2)
+//      ->setTranslatable(TRUE)
+//      ->setDescription(t('The time that the product review was last edited.'));
 
     return $fields;
   }

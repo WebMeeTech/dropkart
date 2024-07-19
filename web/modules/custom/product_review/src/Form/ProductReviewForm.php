@@ -6,6 +6,7 @@ namespace Drupal\product_review\Form;
 
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Language\Language;
 
 /**
  * Form controller for the product review entity edit forms.
