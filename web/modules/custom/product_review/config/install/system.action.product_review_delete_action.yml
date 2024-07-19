@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - product_review
+id: product_review_delete_action
+label: 'Delete product reviews'
+type: product_review
+plugin: entity:delete_action:product_review
+configuration: {  }

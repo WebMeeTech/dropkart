@@ -1,0 +1,11 @@
+entity.product_review.settings:
+  title: 'Product review'
+  description: 'Configure a Product review entity type.'
+  route_name:  entity.product_review.settings
+  parent: system.admin_structure
+
+entity.product_review.collection:
+  title: 'Product reviews'
+  description: 'List of product reviews.'
+  route_name: entity.product_review.collection
+  parent: system.admin_content

@@ -1,0 +1,3 @@
+administer product_review:
+  title: 'Administer product reviews'
+  restrict access: true

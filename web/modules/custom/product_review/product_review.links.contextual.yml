@@ -1,0 +1,10 @@
+entity.product_review.edit_form:
+  route_name: entity.product_review.edit_form
+  group: product_review
+  title: 'Edit'
+
+entity.product_review.delete_form:
+  route_name: entity.product_review.delete_form
+  group: product_review
+  title: 'Delete'
+  weight: 10

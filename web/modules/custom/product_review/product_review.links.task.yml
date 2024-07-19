@@ -1,0 +1,22 @@
+entity.product_review.settings:
+  title: 'Settings'
+  route_name: entity.product_review.settings
+  base_route: entity.product_review.settings
+entity.product_review.view:
+  title: 'View'
+  route_name: entity.product_review.canonical
+  base_route: entity.product_review.canonical
+entity.product_review.edit_form:
+  title: 'Edit'
+  route_name: entity.product_review.edit_form
+  base_route: entity.product_review.canonical
+entity.product_review.delete_form:
+  title: 'Delete'
+  route_name: entity.product_review.delete_form
+  base_route: entity.product_review.canonical
+  weight: 10
+entity.product_review.collection:
+  title: 'Product reviews'
+  route_name: entity.product_review.collection
+  base_route: system.admin_content
+  weight: 10

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - product_review
+id: product_review_save_action
+#label: 'Save product reviews'
+type: product_review
+plugin: entity:save_action:product_review
+configuration: {  }

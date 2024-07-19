@@ -1,0 +1,7 @@
+name: 'Product review'
+type: module
+description: 'This is a Custom Entity to add fivestar rating field and the text area field for the comment'
+package: 'Product Review'
+core_version_requirement: ^10
+dependencies:
+  - drupal:fivestar

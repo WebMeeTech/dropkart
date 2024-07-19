@@ -1,0 +1,5 @@
+product_review.add_form:
+  title: 'Add product review'
+  route_name: entity.product_review.add_form
+  appears_on:
+    - entity.product_review.collection

@@ -1,0 +1,7 @@
+entity.product_review.settings:
+  path: 'admin/structure/product-review'
+  defaults:
+    _form: '\Drupal\product_review\Form\ProductReviewSettingsForm'
+    _title: 'Product review'
+  requirements:
+    _permission: 'administer product_review'
