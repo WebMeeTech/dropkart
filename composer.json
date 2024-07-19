@@ -28,6 +28,7 @@
         "drupal/core-recommended": "^10.2",
         "drupal/facets": "^2.0",
         "drupal/field_formatter": "^3.0@RC",
+        "drupal/fivestar": "^1.0@alpha",
         "drupal/focal_point": "^2.1",
         "drupal/layout_library": "^1.0@beta",
         "drupal/media_entity_browser": "^2.0",
