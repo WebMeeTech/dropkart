@@ -1,12 +1,12 @@
-uuid: 789334ab-20da-4f07-a026-9b9f06972451
+uuid: 4012f0c6-62df-41d7-9ffe-98a64130f1b0
 langcode: en
 status: true
 dependencies:
   module:
     - commerce_product
     - product_review
-id: commerce_product.field_product_review
-field_name: field_product_review
+id: commerce_product.field_product_reviews
+field_name: field_product_reviews
 entity_type: commerce_product
 type: entity_reference
 settings:

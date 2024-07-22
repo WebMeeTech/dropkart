@@ -1,11 +1,10 @@
-uuid: 648f2ca4-bcf9-42ce-b498-c2e49773af0a
+uuid: 9e76a8bc-ad14-4510-b78f-b1c6a1ae42a5
 langcode: en
 status: true
 dependencies:
   module:
     - fivestar
     - product_review
-    - text
     - user
 id: product_review.product_review.default
 targetEntityType: product_review
@@ -13,16 +12,15 @@ bundle: product_review
 mode: default
 content:
   comment:
-    type: text_trimmed
+    type: basic_string
     label: above
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 1
     region: content
   created:
     type: timestamp
-    label: hidden
+    label: above
     settings:
       date_format: medium
       custom_date_format: ''
@@ -37,11 +35,11 @@ content:
         granularity: 2
         refresh: 60
     third_party_settings: {  }
-    weight: 20
+    weight: 3
     region: content
   rating:
     type: fivestar_stars
-    label: hidden
+    label: above
     settings:
       text_format: average
       display_format: average
@@ -51,10 +49,10 @@ content:
     region: content
   uid:
     type: author
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 15
+    weight: 2
     region: content
 hidden:
   search_api_excerpt: true
