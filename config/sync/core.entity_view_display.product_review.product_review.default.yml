@@ -37,6 +37,13 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  feedback:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
   rating:
     type: fivestar_stars
     label: above
@@ -45,7 +52,7 @@ content:
       display_format: average
       fivestar_widget: basic
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   uid:
     type: author

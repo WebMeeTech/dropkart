@@ -72,10 +72,13 @@ content:
       revision: false
     third_party_settings: {  }
   field_review:
-    type: fivestar_select
+    type: fivestar_stars
     weight: 12
     region: content
-    settings: {  }
+    settings:
+      text_format: none
+      display_format: average
+      fivestar_widget: basic
     third_party_settings: {  }
   path:
     type: path
