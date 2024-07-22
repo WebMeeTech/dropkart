@@ -89,17 +89,6 @@ final class ProductReview extends ContentEntityBase implements ProductReviewInte
       ->setLabel(t('Rating'))
       ->setRequired(FALSE)
       ->setDefaultValue(NULL)
-      ->setSettings([
-        'stars' => 5,
-        'allow_clear' => FALSE,
-        'allow_revote' => TRUE,
-        'allow_ownvote' => TRUE,
-        'rated_while' => 'editing',
-        'enable_voting_target' => TRUE,
-        'target_bridge_field' => 'product_ref',
-        'target_fivestar_field' => 'field_review'
-        ]
-      )
       ->setDisplayOptions('form', [
         'type' => 'string_textfield',
       ])
@@ -111,7 +100,7 @@ final class ProductReview extends ContentEntityBase implements ProductReviewInte
       ])
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['comment'] = BaseFieldDefinition::create('string_long')
+    $fields['feedback'] = BaseFieldDefinition::create('string_long')
       ->setTranslatable(TRUE)
       ->setLabel(t('Comment'))
       ->setDisplayOptions('form', [
@@ -121,12 +110,6 @@ final class ProductReview extends ContentEntityBase implements ProductReviewInte
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
-
-    $fields['product_ref'] = BaseFieldDefinition::create('entity_reference')
-      ->setTranslatable(TRUE)
-      ->setLabel(t('Product ref'))
-      ->setSetting('target_type', 'commerce_product')
-      ->setDefaultValueCallback(self::class . '::getDefaultCommerceProduct');
 
     $fields['uid'] = BaseFieldDefinition::create('entity_reference')
       ->setTranslatable(TRUE)
@@ -171,24 +154,7 @@ final class ProductReview extends ContentEntityBase implements ProductReviewInte
       ->setTranslatable(TRUE)
       ->setDescription(t('The time that the product review was last edited.'));
 
-//    $fields['target'] = BaseFieldDefinition::create('target')
-//      ->setLabel(t('Changed'))
-//      ->setSetting('target_type', 'target')
-////      ->setDefaultValue(2)
-//      ->setTranslatable(TRUE)
-//      ->setDescription(t('The time that the product review was last edited.'));
 
     return $fields;
   }
-
-  /**
-   * Default value callback for 'owner' base field.
-   *
-   * @return mixed
-   *   A default value for the owner field.
-   */
-  public static function getDefaultCommerceProduct() {
-    return 100;
-  }
-
 }

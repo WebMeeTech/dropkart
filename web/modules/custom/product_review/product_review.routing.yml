@@ -5,3 +5,14 @@ entity.product_review.settings:
     _title: 'Product review'
   requirements:
     _permission: 'administer product_review'
+
+
+entity.product_review.countdata:
+  path: '/average-rating/{entity_id}'
+  defaults:
+    _controller: '\Drupal\product_review\Controller\ReviewController::getAverageRating'
+    _title: 'Average Rating'
+  requirements:
+    _permission: 'access content'
+    entity_id: \d+
+
