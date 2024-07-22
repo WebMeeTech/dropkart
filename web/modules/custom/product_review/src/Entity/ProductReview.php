@@ -37,6 +37,7 @@ use Drupal\user\EntityOwnerTrait;
  *     "route_provider" = {
  *       "html" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider",
  *     },
+ *   "storage_schema" = "Drupal\product_review\Entity\ProductReviewStorageSchema",
  *   },
  *   base_table = "product_review",
  *   data_table = "product_review_field_data",
@@ -85,13 +86,20 @@ final class ProductReview extends ContentEntityBase implements ProductReviewInte
     $fields = parent::baseFieldDefinitions($entity_type);
 
     $fields['rating'] = BaseFieldDefinition::create('fivestar')
-//      ->setTranslatable(TRUE)
       ->setLabel(t('Rating'))
-      ->set
       ->setRequired(FALSE)
-//      ->setSetting('max_length', 255)
-//        ->setSetting('target_type', 'fivestar')
-      ->setDefaultValue(3)
+      ->setDefaultValue(NULL)
+      ->setSettings([
+        'stars' => 5,
+        'allow_clear' => FALSE,
+        'allow_revote' => TRUE,
+        'allow_ownvote' => TRUE,
+        'rated_while' => 'editing',
+        'enable_voting_target' => TRUE,
+        'target_bridge_field' => 'product_ref',
+        'target_fivestar_field' => 'field_review'
+        ]
+      )
       ->setDisplayOptions('form', [
         'type' => 'string_textfield',
       ])
@@ -103,20 +111,22 @@ final class ProductReview extends ContentEntityBase implements ProductReviewInte
       ])
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['comment'] = BaseFieldDefinition::create('text_long')
+    $fields['comment'] = BaseFieldDefinition::create('string_long')
       ->setTranslatable(TRUE)
       ->setLabel(t('Comment'))
       ->setDisplayOptions('form', [
-        'type' => 'text_textarea',
-        'weight' => 10,
+        'type' => 'string_textarea',
+        'settings' => ['rows' => 6],
+        'weight' => -4,
       ])
       ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayOptions('view', [
-        'type' => 'text_default',
-        'label' => 'above',
-        'weight' => 10,
-      ])
       ->setDisplayConfigurable('view', TRUE);
+
+    $fields['product_ref'] = BaseFieldDefinition::create('entity_reference')
+      ->setTranslatable(TRUE)
+      ->setLabel(t('Product ref'))
+      ->setSetting('target_type', 'commerce_product')
+      ->setDefaultValueCallback(self::class . '::getDefaultCommerceProduct');
 
     $fields['uid'] = BaseFieldDefinition::create('entity_reference')
       ->setTranslatable(TRUE)
@@ -169,6 +179,16 @@ final class ProductReview extends ContentEntityBase implements ProductReviewInte
 //      ->setDescription(t('The time that the product review was last edited.'));
 
     return $fields;
+  }
+
+  /**
+   * Default value callback for 'owner' base field.
+   *
+   * @return mixed
+   *   A default value for the owner field.
+   */
+  public static function getDefaultCommerceProduct() {
+    return 100;
   }
 
 }
