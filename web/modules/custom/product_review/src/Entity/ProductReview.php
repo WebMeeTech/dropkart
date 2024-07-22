@@ -87,7 +87,6 @@ final class ProductReview extends ContentEntityBase implements ProductReviewInte
     $fields['rating'] = BaseFieldDefinition::create('fivestar')
 //      ->setTranslatable(TRUE)
       ->setLabel(t('Rating'))
-      ->set
       ->setRequired(FALSE)
 //      ->setSetting('max_length', 255)
 //        ->setSetting('target_type', 'fivestar')
