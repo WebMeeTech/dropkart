@@ -26,6 +26,7 @@ use Drupal\user\EntityOwnerTrait;
  *     plural = "@count product reviews",
  *   ),
  *   handlers = {
+ *     "storage" = "Drupal\product_review\ProductReviewStorage",
  *     "list_builder" = "Drupal\product_review\ProductReviewListBuilder",
  *     "views_data" = "Drupal\views\EntityViewsData",
  *     "form" = {
@@ -107,6 +108,17 @@ final class ProductReview extends ContentEntityBase implements ProductReviewInte
         'type' => 'string_textarea',
         'settings' => ['rows' => 6],
         'weight' => -4,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['product_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Product'))
+      ->setSetting('target_type', 'commerce_product')
+      ->setRequired(TRUE)
+      ->setDisplayOptions('form', [
+        'type' => 'entity_reference_autocomplete',
+        'weight' => 0,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);

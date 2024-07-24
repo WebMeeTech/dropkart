@@ -16,3 +16,11 @@ entity.product_review.countdata:
     _permission: 'access content'
     entity_id: \d+
 
+product_review.customform:
+  path: '/product-review'
+  defaults:
+    _form: '\Drupal\product_review\Form\ProductReviewCustomForm'
+    _title: 'Product Review'
+  requirements:
+    _permission: 'access content'
+    entity_id: \d+

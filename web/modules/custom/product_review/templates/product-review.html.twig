@@ -18,14 +18,7 @@
     {{ title_prefix }}
     {{ title_suffix }}
   {% endif %}
-  {# Display the average rating #}
-
-
   {% if content %}
     {{- content -}}
   {% endif %}
-  <div class="average-rating">
-    {{ dump(content) }}
-    <p>Average Rating: {{ average_rating }} stars</p>
-  </div>
 </article>

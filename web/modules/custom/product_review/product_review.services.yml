@@ -1,0 +1,6 @@
+services:
+  product_review.storage:
+    class: 'Drupal\product_review\ProductReviewStorage'
+    arguments: ['@entity_type.manager', '@database']
+    tags:
+      - { name: entity.storage, entity_type: product_review }

@@ -11,8 +11,7 @@ class ProductReviewStorageSchema extends SqlContentEntityStorageSchema {
     // Modify the schema for your field to allow NULL values
     $schema['product_review_field_data']['fields']['rating__rating']['not null'] = FALSE;
     $schema['product_review_field_data']['fields']['rating__target']['not null'] = FALSE;
-    $schema['product_review_field_data']['fields']['comment']['not null'] = FALSE;
-    $schema['product_review_field_data']['fields']['product_ref']['not null'] = FALSE;
+    $schema['product_review_field_data']['fields']['feedback']['not null'] = FALSE;
 
     return $schema;
   }

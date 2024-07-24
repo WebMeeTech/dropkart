@@ -31,8 +31,11 @@
       {{ product.field_summary }}
       {{ product.variations }}
       {{ product.field_category }}
+{#      {{ dump(content) }}#}
+{#      <p>Average Rating: {{ content }} stars</p>#}
+      <p>Results: {{ average_rating }} stars</p>
       {{ product.field_product_reviews }}
-      {{ product.field_review }}
+      {{ product_review_form }}
     </div>
   </div>
   {{ product.body }}

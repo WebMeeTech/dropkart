@@ -16,6 +16,19 @@ use Drupal\user\UserInterface;
 function product_review_theme(): array {
   return [
     'product_review' => ['render element' => 'elements'],
+    'fivestar_static_element' => [
+      'template' => 'fivestar-static-element',
+      'variables' => [
+        'star_display' => NULL,
+        'title' => NULL,
+        'description' => NULL,
+//        'user_rating' => NULL,
+//        'average_rating' => NULL,
+//        'votes' => 0,
+//        'stars' => 5,
+//        'microdata' => [],
+      ],
+    ],
   ];
 }
 
@@ -34,6 +47,46 @@ function template_preprocess_product_review(array &$variables): void {
   $variables['view_mode'] = $variables['elements']['#view_mode'];
   foreach (Element::children($variables['elements']) as $key) {
     $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for commerce_product.
+ */
+function product_review_preprocess_commerce_product(array &$variables): void {
+  $product = $variables['elements']['#commerce_product'];
+
+  if ($product) {
+    // Load the ProductReviewStorage service.
+    $storage = \Drupal::entityTypeManager()->getStorage('product_review');
+
+    // Get the product ID.
+    $product_id = $product->id();
+
+    // Get the average rating.
+    $average_rating = $storage->getAverageRating($product_id);
+
+    // Add the average rating to the variables.
+    $variables['average_rating'] = $average_rating;
+
+    // Add the fivestar summary render array.
+    $variables['content'] = [
+      '#theme' => 'fivestar_static_element',
+      '#star_display' => $average_rating,
+      '#title' => NULL,
+      '#description' => NULL,
+    ];
+
+    // Build the Product Review form and add it to the variables.
+    $form = \Drupal::service('form_builder')->getForm('Drupal\product_review\Form\ProductReviewCustomForm',$product_id);
+    $variables['product_review_form'] = $form;
+//    $variables['fivestar_summary'] = [
+//      '#theme' => 'fivestar_summary',
+//      '#average_rating' => $average_rating,
+//      '#stars' => 5,
+//      '#votes' => 0,
+//      '#microdata' => [],
+//    ];
   }
 }
 
@@ -70,3 +123,4 @@ function product_review_user_predelete(UserInterface $account): void {
     $storage->loadMultiple($product_review_ids)
   );
 }
+
