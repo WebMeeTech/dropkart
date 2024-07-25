@@ -1,12 +1,12 @@
-uuid: 0a7da0dd-fc9a-48f8-afca-fa192106b1a0
+uuid: 28e1f914-9959-416b-9f16-83a3eb8ee8da
 langcode: en
 status: true
 dependencies:
   module:
     - comment
     - fivestar
-id: comment.field_test
-field_name: field_test
+id: comment.field_rating
+field_name: field_rating
 entity_type: comment
 type: fivestar
 settings:

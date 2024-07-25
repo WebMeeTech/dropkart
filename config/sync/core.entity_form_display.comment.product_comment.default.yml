@@ -5,7 +5,7 @@ dependencies:
   config:
     - comment.type.product_comment
     - field.field.comment.product_comment.comment_body
-    - field.field.comment.product_comment.field_test
+    - field.field.comment.product_comment.field_rating
   module:
     - fivestar
     - text
@@ -27,7 +27,7 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_test:
+  field_rating:
     type: fivestar_stars
     weight: 3
     region: content

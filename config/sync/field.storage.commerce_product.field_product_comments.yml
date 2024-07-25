@@ -1,17 +1,17 @@
-uuid: 40eaae17-bba8-44f7-9fe6-bc58522af865
+uuid: ae896179-b6e0-4ac1-9311-5c1d13b57296
 langcode: en
 status: true
 dependencies:
   module:
+    - comment
     - commerce_product
-    - fivestar
-id: commerce_product.field_review
-field_name: field_review
+id: commerce_product.field_product_comments
+field_name: field_product_comments
 entity_type: commerce_product
-type: fivestar
+type: comment
 settings:
-  vote_type: vote
-module: fivestar
+  comment_type: product_comment
+module: comment
 locked: false
 cardinality: 1
 translatable: true

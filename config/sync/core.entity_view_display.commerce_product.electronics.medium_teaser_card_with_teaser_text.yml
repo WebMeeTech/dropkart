@@ -8,9 +8,9 @@ dependencies:
     - field.field.commerce_product.electronics.body
     - field.field.commerce_product.electronics.field_brand
     - field.field.commerce_product.electronics.field_category
+    - field.field.commerce_product.electronics.field_product_comments
     - field.field.commerce_product.electronics.field_product_images
-    - field.field.commerce_product.electronics.field_product_reviews
-    - field.field.commerce_product.electronics.field_review
+    - field.field.commerce_product.electronics.field_product_rating
   module:
     - field_formatter
     - layout_builder
@@ -52,8 +52,8 @@ hidden:
   created: true
   field_brand: true
   field_category: true
-  field_product_reviews: true
-  field_review: true
+  field_product_comments: true
+  field_product_rating: true
   search_api_excerpt: true
   stores: true
   uid: true

@@ -18,6 +18,24 @@ content:
       rows: 6
       placeholder: ''
     third_party_settings: {  }
+  feedback:
+    type: string_textarea
+    weight: -4
+    region: content
+    settings:
+      rows: 6
+      placeholder: ''
+    third_party_settings: {  }
+  product_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   rating:
     type: fivestar_select
     weight: 1

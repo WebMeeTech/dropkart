@@ -7,14 +7,12 @@ dependencies:
     - field.field.commerce_product.electronics.body
     - field.field.commerce_product.electronics.field_brand
     - field.field.commerce_product.electronics.field_category
+    - field.field.commerce_product.electronics.field_product_comments
     - field.field.commerce_product.electronics.field_product_images
-    - field.field.commerce_product.electronics.field_product_reviews
-    - field.field.commerce_product.electronics.field_review
+    - field.field.commerce_product.electronics.field_product_rating
   module:
     - commerce
     - commerce_product
-    - fivestar
-    - inline_entity_form
     - media_library
     - path
     - text
@@ -57,28 +55,6 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
-  field_product_reviews:
-    type: inline_entity_form_simple
-    weight: 13
-    region: content
-    settings:
-      form_mode: default
-      override_labels: false
-      label_singular: ''
-      label_plural: ''
-      collapsible: false
-      collapsed: false
-      revision: false
-    third_party_settings: {  }
-  field_review:
-    type: fivestar_stars
-    weight: 12
-    region: content
-    settings:
-      text_format: none
-      display_format: average
-      fivestar_widget: basic
     third_party_settings: {  }
   path:
     type: path
@@ -129,4 +105,6 @@ content:
       form_mode: default
       field_title_text: 'Product information'
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_product_comments: true
+  field_product_rating: true
