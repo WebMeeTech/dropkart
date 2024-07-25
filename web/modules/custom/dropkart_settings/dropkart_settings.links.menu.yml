@@ -1,0 +1,11 @@
+dropkart_settings.settings:
+  title: 'Dropkart Settings'
+  description: 'Configure a Dropkart Settings'
+  route_name:  dropkart_settings_admin.settings
+  parent: system.admin_config
+
+dropkart_settings_client_admin.settings:
+  title: 'Dropkart Client Settings'
+  description: 'Configure a Dropkart Client Settings'
+  route_name:  dropkart_settings_client_admin.settings
+  parent: system.admin_config

@@ -1,0 +1,15 @@
+dropkart_settings_admin.settings:
+  path: 'admin/config/dropkart-admin-settings'
+  defaults:
+    _form: '\Drupal\dropkart_settings\Form\DropkartAdminSettings'
+    _title: 'Dropkart Admin Settings'
+  requirements:
+    _permission: 'access dropkart admin settings'
+
+dropkart_settings_client_admin.settings:
+  path: 'admin/config/dropkart-client-settings'
+  defaults:
+    _form: '\Drupal\dropkart_settings\Form\DropkartClientSettings'
+    _title: 'Dropkart Client Admin Settings'
+  requirements:
+    _permission: 'access dropkart client settings'

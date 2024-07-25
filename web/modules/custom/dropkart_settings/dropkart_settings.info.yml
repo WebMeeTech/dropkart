@@ -1,0 +1,5 @@
+name: 'Dropkart Settings'
+type: module
+description: 'A module to control the settings of the Dropkart'
+package: Custom
+core_version_requirement: ^10 || ^11

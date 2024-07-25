@@ -1,0 +1,17 @@
+<?php
+
+use Drupal\Core\State\StateInterface;
+
+/**
+ * Implements hook_preprocess_HOOK() for commerce_product--full.html.twig.
+ */
+function dropkart_settings_preprocess_commerce_product__full(array &$variables) {
+  $state = \Drupal::state();
+  $reviews_enabled = $state->get('dropkart_settings_admin.enable_reviews', FALSE);
+
+  if (!$reviews_enabled) {
+    // Hide the product rating and comments if reviews are disabled.
+    $variables['product']['field_product_rating'] = [];
+    $variables['product']['field_product_comments'] = [];
+  }
+}
