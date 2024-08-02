@@ -1,14 +1,11 @@
 <?php
+
 namespace Drupal\dropkart_settings\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
 
-/**
- * Class DropkartClientSettings.
- */
-class DropkartClientSettings extends ConfigFormBase {
+class DropkartSettingsForm1 extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
@@ -58,7 +55,7 @@ class DropkartClientSettings extends ConfigFormBase {
       '#open' => TRUE,
     ];
 
-    $form['site_theme']['site_color'] = [
+    $form['site_theme'] ['site_color'] = [
       '#type' => 'color',
       '#title' => $this->t('Select a color for the site theme'),
       '#default_value' => $config->get('site_color') ?? '#ffffff',
@@ -71,32 +68,10 @@ class DropkartClientSettings extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $config = $this->configFactory()->getEditable('dropkart_settings.settings');
-
-    // Save custom logo
-    $logo_fid = $form_state->getValue('custom_logo');
-    if (!empty($logo_fid)) {
-      $file = File::load(reset($logo_fid));
-      if ($file) {
-        $file->setPermanent();
-        $file->save();
-        $config->set('custom_logo', $logo_fid);
-      } else {
-        $config->clear('custom_logo');
-      }
-    } else {
-      $config->clear('custom_logo');
-    }
-
-    // Save site color
-    $site_color = $form_state->getValue('site_color');
-    $config->set('site_color', $site_color);
-
-    $config->save();
-
-    $this->messenger()->addStatus($this->t('The custom logo has been uploaded and the theme color has been updated.'));
+    $this->config('dropkart_settings.settings')
+      ->set('site_color', $form_state->getValue('site_color'))
+      ->save();
 
     parent::submitForm($form, $form_state);
   }
 }
-

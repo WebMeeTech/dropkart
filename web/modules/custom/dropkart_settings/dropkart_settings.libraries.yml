@@ -1,0 +1,7 @@
+dropkart_settings:
+  version: 1.x
+  js:
+    js/dropkart_settings.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

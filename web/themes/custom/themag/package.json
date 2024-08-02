@@ -6,20 +6,20 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "bootstrap": "^4.5.0",
-    "del": "^5.1.0",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^7.0.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.21.0",
+    "bootstrap": "^4.6.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-run": "^1.7.1",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "gulp-sass-lint": "^1.4.0",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "node-sass": "^4.13.0"
+    "sass": "^1.77.8"
   },
   "dependencies": {}
 }

@@ -41,6 +41,7 @@ libraries:
   - themag/drupal-tabs
   - themag/themag-utilities
   - themag/global-styling
+#  - themag/toggle-search-block
 
 
 # Library Overrides

@@ -11,6 +11,14 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_form_system_theme_settings_alter().
  */
 function themag_form_system_theme_settings_alter(&$form, FormStateInterface &$form_state, $form_id = NULL) {
+
+  // Add the theme color setting to the theme settings form.
+//  $form['theme_color'] = [
+//    '#type' => 'color',
+//    '#title' => t('Theme Color'),
+//    '#default_value' => theme_get_setting('theme_color'),
+//  ];
+
   // Work-around for a core bug affecting admin themes. See issue #943212.
   if (isset($form_id)) {
     return;

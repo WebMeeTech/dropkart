@@ -13,3 +13,11 @@ dropkart_settings_client_admin.settings:
     _title: 'Dropkart Client Admin Settings'
   requirements:
     _permission: 'access dropkart client settings'
+
+#dropkart_settings.settings:
+#  path: '/admin/config/dropkart-settings'
+#  defaults:
+#    _form: '\Drupal\dropkart_settings\Form\DropkartSettingsForm'
+#    _title: 'Dropkart Settings'
+#  requirements:
+#    _permission: 'administer site configuration'

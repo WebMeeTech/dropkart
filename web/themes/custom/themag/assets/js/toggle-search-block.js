@@ -1,1 +1,1 @@
-!function(c){"use strict";Drupal.behaviors.themagToggleSearchBlock={attach:function(t){c(t).find(".js-toggle-search").once().on("click",function(e){e.preventDefault(),c(this).toggleClass("active"),c(t).find(".region-search").toggleClass("active")})}}}(jQuery);
+!function(c){"use strict";Drupal.behaviors.themagToggleSearchBlock={attach:function(t){c(t).find(".js-toggle-search").once().on("click",function(e){e.preventDefault(),c(this).toggleClass("active"),c(t).find(".region-search").toggleClass("active")})}}}(jQuery);console.log('New');

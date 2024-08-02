@@ -1,0 +1,1 @@
+{"version":3,"sources":["test.scss","test.css"],"names":[],"mappings":"AAAA;EACE,sBAAA,EAAA,kBAAA;ACCF","file":"../test.css","sourcesContent":[":root {\n  --theme-color: #000000; /* Default color */\n}\n",":root {\n  --theme-color: #000000; /* Default color */\n}"]}

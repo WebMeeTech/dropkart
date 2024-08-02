@@ -68,13 +68,13 @@ back-to-top-button:
 
 # Toggle search block
 # --------------------------------------
-toggle-search-block:
-  js:
-    assets/js/toggle-search-block.js: {}
-  dependencies:
-    - core/jquery
-    - core/jquery.once
-    - core/drupal
+#toggle-search-block:
+#  js:
+#    assets/js/toggle-search-block.js: {}
+#  dependencies:
+#    - core/jquery
+#    - core/jquery.once
+#    - core/drupal
 
 
 # Tabs

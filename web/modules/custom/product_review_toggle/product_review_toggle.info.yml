@@ -1,0 +1,5 @@
+name: 'product_review_toggle'
+type: module
+description: 'sadasd'
+package: Custom
+core_version_requirement: ^10 || ^11
