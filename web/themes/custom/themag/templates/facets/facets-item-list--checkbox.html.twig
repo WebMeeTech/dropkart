@@ -1,0 +1,125 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a facets item list.
+ *
+ * Available variables:
+ * - items: A list of items. Each item contains:
+ *   - attributes: HTML attributes to be applied to each list item.
+ *   - value: The content of the list element.
+ * - title: The title of the list.
+ * - list_type: The tag for list element ("ul" or "ol").
+ * - wrapper_attributes: HTML attributes to be applied to the list wrapper.
+ * - attributes: HTML attributes to be applied to the list.
+ * - empty: A message to display when there are no items. Allowed value is a
+ *   string or render array.
+ * - context: A list of contextual data associated with the list. May contain:
+ *   - list_style: The ID of the widget plugin this facet uses.
+ * - facet: The facet for this result item.
+ *   - id: the machine name for the facet.
+ *   - label: The facet label.
+ *
+ * @see facets_preprocess_facets_item_list()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if cache_hash %}
+  <!-- facets cacheable metadata
+    hash: {{ cache_hash }}
+  {% if cache_contexts %}
+    contexts: {{ cache_contexts }}
+  {%- endif %}
+  {% if cache_tags %}
+    tags: {{ cache_tags }}
+  {%- endif %}
+  {% if cache_max_age %}
+    max age: {{ cache_max_age }}
+  {%- endif %}
+  -->
+{%- endif %}
+<style>
+  /* Facets Widget Container */
+  .facets-widget {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  .facets-widget h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+  }
+
+  /* Facets List */
+  .facets-widget ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .facets-widget li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Facets Checkbox */
+  .facets-widget input[type="checkbox"] {
+    margin-right: 8px;
+    margin-top: -10px;
+    accent-color: #007bff; /* Customize this color to match your theme */
+  }
+
+  /* Facets Label */
+  .facets-widget label {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  /* Hover and Focus Styles */
+  .facets-widget li:hover,
+  .facets-widget li:focus-within {
+    background-color: #eef;
+    border-radius: 4px;
+  }
+
+  /* Results Count */
+  .facets-widget .facet-count {
+    font-size: 14px;
+    color: #777;
+    margin-left: 5px;
+  }
+
+</style>
+<div class="facets-widget">
+  {% if facet.widget.type %}
+    {%- set attributes = attributes.addClass('item-list__' ~ facet.widget.type) %}
+  {% endif %}
+  {% if items or empty %}
+  {%- if title is not empty -%}
+    <h3>{{ title }}</h3>
+  {%- endif -%}
+
+  {%- if items -%}
+  <{{ list_type }}{{ attributes }}>
+  {%- for item in items -%}
+    <li{{ item.attributes }}>{{ item.value }}</li>
+  {%- endfor -%}
+</{{ list_type }}>
+  {%- else -%}
+    {{- empty -}}
+    {%- endif -%}
+  {%- endif %}
+
+{% if facet.widget.type == "slider" %}
+  <label id="facet_{{ facet.id }}_label">{{ 'Facet'|t }} {{ facet.label }}</label>
+{%- endif %}
+</div>
