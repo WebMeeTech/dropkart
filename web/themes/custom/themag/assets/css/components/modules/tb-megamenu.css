@@ -5,7 +5,6 @@
 .tb-megamenu .mega-group-ct {
   *zoom: 1;
 }
-
 .tb-megamenu .clearfix:before, .tb-megamenu .clearfix:after,
 .tb-megamenu .mega-inner:before,
 .tb-megamenu .mega-inner:after,
@@ -17,7 +16,6 @@
   content: "";
   line-height: 0;
 }
-
 .tb-megamenu .clearfix:after,
 .tb-megamenu .mega-inner:after,
 .tb-megamenu .mega-group:after,
@@ -43,7 +41,7 @@
   padding: 0;
 }
 
-.tb-megamenu .mega-group-ct > .row-fluid > [class*="span"] > .mega-inner {
+.tb-megamenu .mega-group-ct > .row-fluid > [class*=span] > .mega-inner {
   padding: 0;
 }
 
@@ -56,7 +54,6 @@
   list-style: none;
   padding: 0;
 }
-
 .tb-megamenu-nav li {
   display: block;
 }
@@ -111,7 +108,7 @@
   display: inline-block;
 }
 
-.tb-megamenu .nav [class^="fa-"],
+.tb-megamenu .nav [class^=fa-],
 .tb-megamenu .nav [class*=" fa-"] {
   margin-right: 5px;
 }
@@ -206,7 +203,7 @@
 .tb-megamenu .dropup .caret {
   border-top: 0;
   border-bottom: 4px solid #000;
-  content: "\2191";
+  content: "↑";
 }
 
 .tb-megamenu .dropup .dropdown-menu {
@@ -286,8 +283,8 @@
 
 .tb-megamenu .fade {
   opacity: 0;
-  -webkit-transition: opacity .15s linear;
-  transition: opacity .15s linear;
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
 }
 
 .tb-megamenu .fade.in {
@@ -298,8 +295,8 @@
   position: relative;
   height: 0;
   overflow: visible;
-  -webkit-transition: height .35s ease;
-  transition: height .35s ease;
+  -webkit-transition: height 0.35s ease;
+  transition: height 0.35s ease;
 }
 
 .tb-megamenu .collapse.in {
@@ -336,7 +333,6 @@
 .tb-megamenu .btn-navbar {
   display: none !important;
 }
-
 .tb-megamenu .btn-navbar .mega > .mega-dropdown-menu {
   min-width: 12em;
 }
@@ -347,34 +343,28 @@
   display: flex;
   margin: 0;
 }
-
 .tb-megamenu .level-1 > * {
   display: none;
 }
-
 .tb-megamenu .dropdown-menu {
   background: rgba(255, 255, 255, 0.9);
   margin: 0;
   padding: 0;
   border: none;
-  border-radius: 0 .25rem .25rem .25rem;
+  border-radius: 0 0.25rem 0.25rem 0.25rem;
   -webkit-box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
 }
-
 .tb-megamenu .nav > li.mega-align-center > .dropdown-menu {
-  border-top-left-radius: .25rem;
+  border-top-left-radius: 0.25rem;
 }
-
 .tb-megamenu .nav > li.mega-align-right > .dropdown-menu {
-  border-top-left-radius: .25rem;
+  border-top-left-radius: 0.25rem;
   border-top-right-radius: 0;
 }
-
 .tb-megamenu .mega-inner {
-  padding: .5rem;
+  padding: 0.5rem;
 }
-
 .tb-megamenu .tb-megamenu-no-link {
   cursor: pointer !important;
 }
@@ -386,16 +376,15 @@
 .tb-megamenu .nav > li > a,
 .tb-megamenu .nav > li > span.tb-megamenu-no-link {
   padding: 0.778rem;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: #263238;
   font-weight: bold;
   font-size: 0.889rem;
   line-height: 1;
   text-transform: uppercase;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-
 .tb-megamenu .nav > li > a:hover,
 .tb-megamenu .nav > li > span.tb-megamenu-no-link:hover {
   background: #f2f4f5;
@@ -424,14 +413,12 @@
   display: block;
   border-bottom: 1px solid #eceff1;
 }
-
 .tb-megamenu .mega-nav li:last-child {
   border-bottom: none;
 }
-
 .tb-megamenu .mega-nav li a, .tb-megamenu .mega-nav li span.tb-megamenu-no-link {
   display: block;
-  padding: .5rem .7rem;
+  padding: 0.5rem 0.7rem;
   font-size: 0.889rem;
   font-weight: normal;
   text-transform: none;
@@ -470,9 +457,8 @@
 }
 
 .tb-block .block__title {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 .tb-block .block__title .title-text {
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -482,10 +468,9 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: #263238;
-  font-size: .8rem;
+  font-size: 0.8rem;
   list-style: none;
 }
-
 .tb-block .block-menu ul li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -493,19 +478,16 @@
   -ms-flex-line-pack: center;
       align-content: center;
 }
-
 .tb-block .block-menu ul li:before {
   content: "•";
   color: #607d8b;
   width: 1em;
   margin-left: -1em;
 }
-
 .tb-block .block-menu ul li a {
   margin: 0;
   padding: 0;
 }
-
 .tb-block .block-menu ul li a:hover {
   background: none;
   color: #263238;
@@ -576,5 +558,4 @@
     margin-left: 0;
   }
 }
-
 /*# sourceMappingURL=../../sourcemap/components/modules/tb-megamenu.css.map */

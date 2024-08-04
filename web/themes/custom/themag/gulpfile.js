@@ -1,7 +1,7 @@
 const { src, dest, task, series, watch } = require("gulp");
 
 // Import Gulp plugins.
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
@@ -33,7 +33,7 @@ const javascript = () => {
 
 // Compile SCSS
 const scss = () => {
-  sass.compiler = require('node-sass');
+  sass.compiler = require('sass');
   return src('./_src/themag/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -44,6 +44,10 @@ const scss = () => {
     .pipe(sourcemaps.write('./sourcemap/'))
     .pipe(dest('./assets/css'));
 };
+
+// Define tasks
+task('scss', scss);
+task('javascript', javascript);
 
 exports.default = () => {
   watch(['./_src/themag/scss/**/*.scss'], scss);
