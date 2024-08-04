@@ -1,0 +1,9 @@
+access dropkart admin settings:
+  title: 'Access Dropkart Admin Form Settings'
+  description: 'Allows administrators to access the Dropkart configuration settings form.'
+  restrict access: true
+
+access dropkart client settings:
+  title: 'Access Dropkart Client Settings'
+  description: 'Allows client admins to access the Dropkart configuration settings form.'
+  restrict access: true

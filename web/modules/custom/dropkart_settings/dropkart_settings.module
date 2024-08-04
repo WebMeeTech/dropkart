@@ -1,0 +1,28 @@
+<?php
+
+use Drupal\Core\State\StateInterface;
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function dropkart_settings_page_attachments_alter(array &$attachments) {
+  $config = \Drupal::config('dropkart_settings.settings');
+  $site_color = $config->get('site_color');
+  $attachments['#attached']['library'][] = 'dropkart_settings/dropkart_settings';
+  $attachments['#attached']['drupalSettings']['dropkart_settings']['site_color'] = $site_color;
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for commerce_product--full.html.twig.
+ */
+function dropkart_settings_preprocess_commerce_product__full(array &$variables) {
+  $state = \Drupal::state();
+  $reviews_enabled = $state->get('dropkart_settings_admin.enable_reviews', FALSE);
+
+  if (!$reviews_enabled) {
+    // Hide the product rating and comments if reviews are disabled.
+    $variables['product']['field_product_rating'] = [];
+    $variables['product']['field_product_comments'] = [];
+  }
+}
