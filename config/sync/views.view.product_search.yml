@@ -9,7 +9,6 @@ dependencies:
     - image.style.small_compact_teaser_260x260
     - search_api.index.product_index
   module:
-    - commerce_price
     - media
     - search_api
     - text
@@ -190,78 +189,6 @@ display:
               video:
                 display_method: label
                 view_mode: default
-        price:
-          id: price
-          table: search_api_datasource_product_index_entity_commerce_product_variation
-          field: price
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: commerce_product_variation
-          plugin_id: search_api_field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: '0'
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: number
-          type: commerce_price_default
-          settings:
-            strip_trailing_zeroes: false
-            currency_display: code
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
         body_1:
           id: body_1
           table: search_api_datasource_product_index_entity_commerce_product
@@ -336,59 +263,6 @@ display:
           id: number
           table: search_api_index_product_index
           field: number
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: '0'
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          link_to_item: false
-          use_highlighting: false
-          multi_type: separator
-          multi_separator: ', '
-        currency_code:
-          id: currency_code
-          table: search_api_index_product_index
-          field: currency_code
           relationship: none
           group_type: group
           admin_label: ''
@@ -911,6 +785,7 @@ display:
           quantity: 9
       defaults:
         pager: false
+      exposed_block: true
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -931,6 +806,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      exposed_block: false
       display_extenders: {  }
       path: products
     cache_metadata:

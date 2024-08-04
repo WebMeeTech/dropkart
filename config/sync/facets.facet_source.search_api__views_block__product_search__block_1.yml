@@ -1,0 +1,9 @@
+uuid: df5609e7-9a89-411f-8b5e-7de197690522
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_block__product_search__block_1
+name: 'search_api:views_block__product_search__block_1'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

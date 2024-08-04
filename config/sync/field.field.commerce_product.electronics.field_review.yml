@@ -1,17 +1,17 @@
-uuid: 4594673d-492b-48f1-b258-fb16951fe570
+uuid: 1ca24952-54b0-4a26-bf4d-e4b92c2266e1
 langcode: en
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.electronics
-    - field.storage.commerce_product.field_product_rating
+    - field.storage.commerce_product.field_review
   module:
     - fivestar
-id: commerce_product.electronics.field_product_rating
-field_name: field_product_rating
+id: commerce_product.electronics.field_review
+field_name: field_review
 entity_type: commerce_product
 bundle: electronics
-label: 'Product rating'
+label: Review
 description: ''
 required: false
 translatable: false
@@ -22,7 +22,7 @@ settings:
   allow_clear: false
   allow_revote: true
   allow_ownvote: true
-  rated_while: editing
+  rated_while: viewing
   enable_voting_target: false
   target_bridge_field: ''
   target_fivestar_field: ''

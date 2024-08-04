@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.commerce_product.field_brand
     - field.storage.commerce_product.body
     - field.storage.commerce_product.field_product_images
     - search_api.server.product_store
   module:
+    - taxonomy
     - commerce_product
     - search_api
 id: product_index
@@ -40,6 +42,16 @@ field_settings:
     dependencies:
       module:
         - commerce_product
+  name_1:
+    label: 'Brand » Taxonomy term » Name'
+    datasource_id: 'entity:commerce_product'
+    property_path: 'field_brand:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.commerce_product.field_brand
+      module:
+        - taxonomy
   number:
     label: 'Default variation » Product variation » Price » Number'
     datasource_id: 'entity:commerce_product'

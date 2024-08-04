@@ -1,0 +1,13 @@
+uuid: 026acb09-a6b4-4f51-a107-297e58aec412
+langcode: en
+status: true
+dependencies:
+  module:
+    - product_review
+_core:
+  default_config_hash: 6irrpGAjG2aaK87qzLbLZihH4_vRp2RevAd7pEOjbKU
+id: product_review_save_action
+label: null
+type: product_review
+plugin: 'entity:save_action:product_review'
+configuration: {  }

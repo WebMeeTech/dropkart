@@ -1,0 +1,102 @@
+uuid: b5c016a7-7327-4d02-b2f4-531b1a10aa86
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.product_index
+    - views.view.product_search
+  module:
+    - search_api
+id: variations_product_variation_price_number
+name: 'Variations » Product variation » Price » Number'
+weight: 0
+min_count: 1
+missing: false
+missing_label: others
+url_alias: variations_product_variation_price_number
+facet_source_id: 'search_api:views_block__product_search__block_1'
+field_identifier: number_2
+query_operator: or
+hard_limit: 0
+exclude: false
+use_hierarchy: false
+keep_hierarchy_parents_active: false
+hierarchy:
+  type: taxonomy
+  config: {  }
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
+widget:
+  type: slider
+  config:
+    show_numbers: true
+    prefix: LKR
+    suffix: ''
+    min_type: search_result
+    min_value: 0.0
+    max_type: search_result
+    max_value: 10.0
+    step: 1.0
+empty_behavior:
+  behavior: none
+only_visible_when_facet_source_is_visible: true
+show_only_one_result: true
+show_title: false
+processor_configs:
+  active_widget_order:
+    processor_id: active_widget_order
+    weights:
+      sort: 20
+    settings:
+      sort: DESC
+  count_widget_order:
+    processor_id: count_widget_order
+    weights:
+      sort: 30
+    settings:
+      sort: DESC
+  display_value_widget_order:
+    processor_id: display_value_widget_order
+    weights:
+      sort: 40
+    settings:
+      sort: ASC
+  hierarchy_processor:
+    processor_id: hierarchy_processor
+    weights:
+      build: 100
+    settings: {  }
+  list_item:
+    processor_id: list_item
+    weights:
+      build: 5
+    settings: {  }
+  range_slider:
+    processor_id: range_slider
+    weights:
+      pre_query: 60
+      post_query: 60
+      build: 20
+    settings: {  }
+  show_only_deepest_level_items_processor:
+    processor_id: show_only_deepest_level_items_processor
+    weights:
+      build: 40
+    settings: {  }
+  show_siblings_processor:
+    processor_id: show_siblings_processor
+    weights:
+      build: 11
+    settings:
+      show_parent_siblings: true
+  slider:
+    processor_id: slider
+    weights:
+      post_query: 60
+    settings: {  }
+  url_processor_handler:
+    processor_id: url_processor_handler
+    weights:
+      pre_query: 50
+      build: 15
+    settings: {  }
