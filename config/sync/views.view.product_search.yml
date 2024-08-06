@@ -911,6 +911,7 @@ display:
           quantity: 9
       defaults:
         pager: false
+      exposed_block: true
       display_extenders: {  }
     cache_metadata:
       max-age: -1

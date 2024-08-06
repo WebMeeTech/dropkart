@@ -1,0 +1,74 @@
+uuid: 928a7f39-339c-4137-8d6c-8086b6f96f10
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.product_index
+    - views.view.product_search
+  module:
+    - search_api
+id: default_variation_product_variation_price_number
+name: 'Default variation » Product variation » Price » Number'
+weight: 0
+min_count: 1
+missing: false
+missing_label: others
+url_alias: default_variation_product_variation_price_number
+facet_source_id: 'search_api:views_block__product_search__block_1'
+field_identifier: number
+query_operator: or
+hard_limit: 0
+exclude: false
+use_hierarchy: false
+keep_hierarchy_parents_active: false
+hierarchy:
+  type: taxonomy
+  config: {  }
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
+widget:
+  type: range_slider
+  config:
+    show_numbers: true
+    prefix: ''
+    suffix: ''
+    min_type: fixed
+    min_value: 0.0
+    max_type: fixed
+    max_value: 10000000.0
+    step: 1.0
+empty_behavior:
+  behavior: none
+only_visible_when_facet_source_is_visible: false
+show_only_one_result: false
+show_title: false
+processor_configs:
+  active_widget_order:
+    processor_id: active_widget_order
+    weights:
+      sort: 20
+    settings:
+      sort: DESC
+  count_widget_order:
+    processor_id: count_widget_order
+    weights:
+      sort: 30
+    settings:
+      sort: DESC
+  display_value_widget_order:
+    processor_id: display_value_widget_order
+    weights:
+      sort: 40
+    settings:
+      sort: ASC
+  hierarchy_processor:
+    processor_id: hierarchy_processor
+    weights:
+      build: 100
+    settings: {  }
+  url_processor_handler:
+    processor_id: url_processor_handler
+    weights:
+      pre_query: 50
+      build: 15
+    settings: {  }
