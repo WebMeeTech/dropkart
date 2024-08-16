@@ -8,16 +8,54 @@
 {% extends 'node--teaser.html.twig' %}
 
 {% set teaser_classes = [
-  'teaser--card',
-  'teaser--medium-card'
+  'teaser--',
+  'teaser--image',
+  'channel teaser--channel',
+  'teaser--headline'
 ] %}
 
 {% set attributes = attributes.addClass(teaser_classes) %}
 
 
 {% block teaser_content %}
-  {{ product.field_product_images }}
-  {{ product.title }}
-  {{ price }}
+<style>
+  .teaser{
+    position: relative;
+    /* background: blue; */
+    /*border: 1px solid;*/
+    /*padding: 20px;*/
+    border-color: #c5c4c3;
+    /*border-radius: 20px;*/
+  }
 
+.s{
+      border: 1px solid;
+ border-color: #c5c4c3;
+}
+  .teaser--medium-card{
+    position: relative;
+    /* background: blue; */
+    padding: 20px;
+    border:1px solid #cfd8dc;
+    border-radius: 10px;
+    background-color:#fff;
+  }
+</style>
+<div class="teaser--medium-card">
+  <div>
+    {{ product.field_product_images }}
+  </div>
+  <div>
+    {% if product_entity.bundle %}
+      {% set product_type = product_entity.type.entity %}
+    <div class="channel teaser--channel">
+      {{ product_type.label }}
+    {% endif %}
+   <div>{{ product.field_category }}</div>
+  </div>
+  <h2>
+    {{ product.title }}
+  </h2>
+  {{ product.variation_price }}
+</div>
 {% endblock %}

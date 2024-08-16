@@ -394,9 +394,9 @@
 
 .teaser--compact {
   .teaser__content {
-    background-image: linear-gradient(rgba(#000, 0), rgba(#000, .9));
+    background-image: linear-gradient(rgba(#7c7b7b, 0), rgba(#dadada, .9));
     padding: 1.5rem;
-    position: absolute;
+    //position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
@@ -406,8 +406,8 @@
     a { color: #fff; }
   }
   .teaser__headline {
-    color: #fff;
-    a { color: #fff; }
+    color: #454545;
+    a { color: #454545; }
   }
   .teaser__authored {
     color: $theme-gray-light;

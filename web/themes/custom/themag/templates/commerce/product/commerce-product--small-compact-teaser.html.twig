@@ -15,8 +15,18 @@
 {% set attributes = attributes.addClass(teaser_classes) %}
 
 {% block teaser_content %}
-<div class="teaser--compact">
+<div class="teaser--media">
   {{ product.field_product_images }}
-  {{ product.title }}
+  <div class="channel teaser__channel">
+    <h2 class="teaser__headline">
+    {{ product.title }}
+    </h2>
+  </div>
 </div>
 {% endblock %}
+{#{% block teaser_content %}#}
+{#  <div class="teaser--compact">#}
+{#    {{ product.field_product_images }}#}
+{#    {{ product.title }}#}
+{#  </div>#}
+{#{% endblock %}#}

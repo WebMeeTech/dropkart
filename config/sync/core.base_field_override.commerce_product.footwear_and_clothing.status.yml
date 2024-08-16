@@ -1,0 +1,22 @@
+uuid: 3503c231-3cd7-4e7d-9162-41a583b6613a
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.footwear_and_clothing
+id: commerce_product.footwear_and_clothing.status
+field_name: status
+entity_type: commerce_product
+bundle: footwear_and_clothing
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

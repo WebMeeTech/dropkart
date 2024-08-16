@@ -56,7 +56,7 @@ field_settings:
     label: 'Default variation » Product variation » Price » Number'
     datasource_id: 'entity:commerce_product'
     property_path: 'default_variation:entity:price:number'
-    type: integer
+    type: decimal
     dependencies:
       module:
         - commerce_product
@@ -64,7 +64,7 @@ field_settings:
     label: 'Price » Number'
     datasource_id: 'entity:commerce_product_variation'
     property_path: 'price:number'
-    type: string
+    type: decimal
     dependencies:
       module:
         - commerce_product
@@ -72,7 +72,7 @@ field_settings:
     label: 'Variations » Product variation » Price » Number'
     datasource_id: 'entity:commerce_product'
     property_path: 'variations:entity:price:number'
-    type: string
+    type: decimal
     dependencies:
       module:
         - commerce_product
@@ -156,7 +156,6 @@ processor_settings:
     fields:
       - body
       - name
-      - number_1
       - sku
       - title
       - title_1
@@ -177,7 +176,6 @@ processor_settings:
     fields:
       - body
       - name
-      - number_1
       - sku
       - title
       - title_1

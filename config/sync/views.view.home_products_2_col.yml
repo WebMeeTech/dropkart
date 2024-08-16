@@ -1,15 +1,13 @@
-uuid: 52670679-0ffd-4183-8363-04a116325944
+uuid: 000a2fd3-d93c-4725-81ba-88568f8ba06d
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.commerce_product.single_card_preview
+    - core.entity_view_mode.commerce_product.medium_teaser_card_with_teaser_text
   module:
-    - blazy
     - commerce_product
-    - user
-id: home_products
-label: 'Home Products'
+id: home_products_2_col
+label: 'home products'
 module: views
 description: ''
 tag: ''
@@ -22,7 +20,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Home Products'
+      title: 'home products'
       fields:
         title:
           id: title
@@ -65,9 +63,9 @@ display:
             html: false
           element_type: ''
           element_class: ''
-          element_label_type: h2
+          element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -76,12 +74,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: blazy_title
-          settings:
-            delimiter: '|'
-            tag: small
-            break: false
-            link_to_entity: 1
+          type: string
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -96,7 +90,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 2
+          items_per_page: 8
       exposed_form:
         type: basic
         options:
@@ -108,31 +102,54 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
-        options:
-          perm: 'access content'
+        type: none
+        options: {  }
       cache:
         type: tag
         options: {  }
       empty: {  }
-      sorts:
-        created:
-          id: created
+      sorts: {  }
+      arguments:
+        type:
+          id: type
           table: commerce_product_field_data
-          field: created
+          field: type
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: commerce_product
-          entity_field: created
-          plugin_id: date
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
-          granularity: second
-      arguments: {  }
+          entity_field: type
+          plugin_id: string
+          default_action: ignore
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          glossary: false
+          limit: 0
+          case: none
+          path_case: none
+          transform_dash: false
+          break_phrase: false
       filters:
         status:
           id: status
@@ -146,18 +163,19 @@ display:
           expose:
             operator: ''
       style:
-        type: grid_responsive
+        type: html_list
         options:
+          row_class: ''
+          default_row_class: true
           uses_fields: false
-          columns: 2
-          cell_min_width: 100
-          grid_gutter: 10
-          alignment: horizontal
+          type: ul
+          wrapper_class: 'list grid-md--2-columns'
+          class: ''
       row:
         type: 'entity:commerce_product'
         options:
           relationship: none
-          view_mode: single_card_preview
+          view_mode: medium_teaser_card_with_teaser_text
       query:
         type: views_query
         options:
@@ -169,9 +187,9 @@ display:
       relationships: {  }
       use_more: true
       use_more_always: true
-      use_more_text: 'Show More'
+      use_more_text: More
       link_display: custom_url
-      link_url: /all-products
+      link_url: /products
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -180,7 +198,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user.permissions
+        - url
       tags: {  }
   block_1:
     id: block_1
@@ -189,13 +207,10 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      block_category: '(TM) Views Examples'
-      allow:
-        items_per_page: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user.permissions
+        - url
       tags: {  }

@@ -10,6 +10,7 @@ dependencies:
     - search_api.index.product_index
   module:
     - commerce_price
+    - commerce_product
     - media
     - search_api
     - text
@@ -385,59 +386,6 @@ display:
           use_highlighting: false
           multi_type: separator
           multi_separator: ', '
-        currency_code:
-          id: currency_code
-          table: search_api_index_product_index
-          field: currency_code
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: '0'
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          link_to_item: false
-          use_highlighting: false
-          multi_type: separator
-          multi_separator: ', '
         field_category:
           id: field_category
           table: search_api_datasource_product_index_entity_commerce_product
@@ -647,6 +595,78 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
+        price_1:
+          id: price_1
+          table: search_api_entity_commerce_product_variation
+          field: price
+          relationship: default_variation
+          group_type: group
+          admin_label: ''
+          entity_type: commerce_product_variation
+          plugin_id: search_api_field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: number
+          type: commerce_price_default
+          settings:
+            strip_trailing_zeroes: false
+            currency_display: symbol
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
         nothing:
           id: nothing
           table: views
@@ -659,7 +679,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a class=\"teaser__link-overlay\" href=\"{{ search_api_url }}\"><div class=\"teaser teaser--card teaser--medium-card teaser--bordered\">\r\n  <div class=\"teaser__media\">\r\n    <div class=\"image teaser__image\">\r\n      {{ field_product_images }}\r\n    </div>\r\n  </div>\r\n  <div class=\"teaser__content\">\r\n    <header>\r\n      <div class=\"channel teaser__channel\">\r\n        <a href=\"{{ search_api_url }}\">{{ title }}</a>\r\n      </div>\r\n      <div class=\"teaser__channel\">\r\n        {{ currency_code }} {{ number }}\r\n      </div>\r\n    </header>\r\n    <div class=\"teaser__body\">\r\n      {{ field_category }}\r\n    </div>\r\n    <footer class=\"teaser__authored\">\r\n      <span class=\"author\">{{ title_1 }}</span>\r\n    </footer>\r\n  </div>\r\n</div>\r\n</a>\r\n"
+            text: "<a href=\"{{ search_api_url }}\"><div class=\"teaser teaser--card teaser--medium-card teaser--bordered\">\r\n    <div class=\"teaser__media\">\r\n      <div class=\"image teaser__image\">\r\n        {{ field_product_images }}\r\n      </div>\r\n    </div>\r\n    <div class=\"teaser__content\">\r\n      <header>\r\n        <div class=\"channel teaser__channel\">\r\n          <a href=\"{{ search_api_url }}\">{{ title }}</a>\r\n        </div>\r\n        <div class=\"teaser__channel\">\r\n           {{price_1}}\r\n        </div>\r\n<div>\r\n</div>\r\n      </header>\r\n      <div class=\"teaser__body\">\r\n        {{ field_category }}\r\n      </div>\r\n      <footer class=\"teaser__authored\">\r\n        <span class=\"author\">{{ title_1 }}</span>\r\n      </footer>\r\n    </div>\r\n</a>\r\n  "
             make_link: false
             path: ''
             absolute: false
@@ -865,7 +885,18 @@ display:
           skip_access: false
           preserve_facet_query_args: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        default_variation:
+          id: default_variation
+          table: search_api_datasource_product_index_entity_commerce_product
+          field: default_variation
+          relationship: none
+          group_type: group
+          admin_label: 'Default variation: Product variation'
+          entity_type: commerce_product
+          plugin_id: search_api
+          required: false
+          skip_access: false
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -933,7 +964,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: products
+      path: all-products
     cache_metadata:
       max-age: -1
       contexts:
