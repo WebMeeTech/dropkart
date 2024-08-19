@@ -33,10 +33,10 @@
       {{ product.field_category }}
       {{ product.field_product_rating }}
       {{ product.field_product_comments }}
+     <p>No Of Orders: {{  get_order_count(158) }}</p>
     </div>
   </div>
   {{ product.body }}
-
 {#    {{ product|without('variation_price', 'variation_sku', 'variations', 'title', 'field_category', 'field_summary') }}#}
 
 </div>

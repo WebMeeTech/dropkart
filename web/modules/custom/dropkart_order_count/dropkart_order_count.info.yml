@@ -1,0 +1,9 @@
+name: 'Dropkart Order Count'
+type: module
+description: 'This module used to count number of orders placed against a product'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:commerce
+  - drupal:commerce_order
+version: '1.0.0'

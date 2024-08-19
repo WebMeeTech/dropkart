@@ -1,0 +1,10 @@
+services:
+  dropkart_order_count.order_count_service:
+    class: 'Drupal\dropkart_order_count\OrderCountService'
+    arguments: ['@database']
+
+  dropkart_order_count.twig_extension:
+    class: 'Drupal\dropkart_order_count\Twig\OrderCountTwigExtension'
+    arguments: ['@dropkart_order_count.order_count_service']
+    tags:
+      - { name: twig.extension }
