@@ -3,6 +3,8 @@ global-styling:
   css:
     theme:
       assets/css/themag.css: { weight: -20 }
+#      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css: { type: external }
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css: { type: external }
 
 drupal.dialog.off_canvas:
   css:

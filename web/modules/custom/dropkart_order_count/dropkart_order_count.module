@@ -1,10 +1,18 @@
 <?php
 
 /**
- * Implements hook_entity_type_build().
+ * Implements hook_preprocess_HOOK() for commerce-product--full.html.twig.
  */
-function dropkart_order_count_entity_type_build(array &$entity_types) {
-  if (isset($entity_types['commerce_product'])) {
-    $entity_types['commerce_product']->set('context', ['commerce_product']);
-  }
+function themag_preprocess_commerce_product__full(array &$variables) {
+  // Get the product entity.
+  $product_entity = $variables['product_entity'];
+
+  // Load the order count service.
+  $order_count_service = \Drupal::service('dropkart_order_count.order_count_service');
+
+  // Get the order count for the product.
+  $order_count = $order_count_service->getOrderCount($product_entity->id());
+
+  // Add the order count to the variables to be available in the Twig template.
+  $variables['order_count'] = $order_count;
 }

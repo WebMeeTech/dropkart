@@ -32,8 +32,9 @@
       {{ product.variations }}
       {{ product.field_category }}
       {{ product.field_product_rating }}
+      <p><i class="fa-solid fa-cart-arrow-down"></i> ({{ order_count }})</p>
+{#      <p>No Of Orders:<i class="fa-solid fa-cart-arrow-down"></i> {{ order_count }}</p>#}
       {{ product.field_product_comments }}
-     <p>No Of Orders: {{  get_order_count(158) }}</p>
     </div>
   </div>
   {{ product.body }}
