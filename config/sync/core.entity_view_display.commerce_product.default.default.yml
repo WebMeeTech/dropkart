@@ -7,9 +7,11 @@ dependencies:
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.field_product_images
     - field.field.commerce_product.default.field_product_price
+    - field.field.commerce_product.default.field_product_stock
     - image.style.large
   module:
     - commerce_product
+    - commerce_stock_field
     - layout_builder
     - layout_library
     - media
@@ -55,6 +57,13 @@ content:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_product_stock:
+    type: commerce_stock_level_simple
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   title:
     type: string

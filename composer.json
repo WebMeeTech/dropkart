@@ -66,6 +66,11 @@
                 "web-root": "web/"
             }
         },
+        "patches": {
+            "drupal/core": {
+                "Fix query access check issue": "https://www.drupal.org/files/issues/2023-12-08/core-patch.patch"
+            }
+        },
         "installer-paths": {
             "web/core": [
                 "type:drupal-core"

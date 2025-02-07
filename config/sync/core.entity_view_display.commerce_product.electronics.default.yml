@@ -11,10 +11,12 @@ dependencies:
     - field.field.commerce_product.electronics.field_product_comments
     - field.field.commerce_product.electronics.field_product_images
     - field.field.commerce_product.electronics.field_product_rating
+    - field.field.commerce_product.electronics.field_product_stock
     - image.style.large
   module:
     - comment
     - commerce_product
+    - commerce_stock_field
     - fivestar
     - media
     - text
@@ -40,7 +42,7 @@ content:
     region: content
   field_category:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -53,7 +55,7 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_product_images:
     type: media_thumbnail
@@ -74,7 +76,14 @@ content:
       display_format: average
       fivestar_widget: basic
     third_party_settings: {  }
-    weight: 6
+    weight: 7
+    region: content
+  field_product_stock:
+    type: commerce_stock_level_simple
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   title:
     type: string

@@ -7,10 +7,12 @@ dependencies:
     - field.field.commerce_product.default.body
     - field.field.commerce_product.default.field_product_images
     - field.field.commerce_product.default.field_product_price
+    - field.field.commerce_product.default.field_product_stock
   module:
     - commerce
     - commerce_price
     - commerce_product
+    - commerce_stock_field
     - inline_entity_form
     - path
     - text
@@ -55,6 +57,15 @@ content:
     weight: 7
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_product_stock:
+    type: commerce_stock_level_simple_transaction
+    weight: 10
+    region: content
+    settings:
+      step: '1'
+      custom_transaction_note: false
+      default_transaction_note: 'Transaction issued by stock level field.'
     third_party_settings: {  }
   path:
     type: path

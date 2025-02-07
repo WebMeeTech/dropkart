@@ -1,0 +1,21 @@
+uuid: 1026bdad-661f-4622-871a-02fc0d310271
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.footwear_and_clothing
+    - field.storage.commerce_product_variation.field_product_stock
+  module:
+    - commerce_stock_field
+id: commerce_product_variation.footwear_and_clothing.field_product_stock
+field_name: field_product_stock
+entity_type: commerce_product_variation
+bundle: footwear_and_clothing
+label: 'Product Stock'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: commerce_stock_level

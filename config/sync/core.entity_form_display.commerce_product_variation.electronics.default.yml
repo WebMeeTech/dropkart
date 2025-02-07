@@ -7,8 +7,10 @@ dependencies:
     - field.field.commerce_product_variation.electronics.attribute_color
     - field.field.commerce_product_variation.electronics.attribute_ram
     - field.field.commerce_product_variation.electronics.attribute_storage
+    - field.field.commerce_product_variation.electronics.field_product_stock
   module:
     - commerce_price
+    - commerce_stock_field
 id: commerce_product_variation.electronics.default
 targetEntityType: commerce_product_variation
 bundle: electronics
@@ -31,6 +33,22 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  commerce_stock_always_in_stock:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_product_stock:
+    type: commerce_stock_level_simple_transaction
+    weight: 91
+    region: content
+    settings:
+      step: '1'
+      custom_transaction_note: false
+      default_transaction_note: 'Transaction issued by stock level field.'
     third_party_settings: {  }
   list_price:
     type: commerce_list_price
