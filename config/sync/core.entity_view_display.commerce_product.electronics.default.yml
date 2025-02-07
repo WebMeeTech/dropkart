@@ -16,7 +16,7 @@ dependencies:
   module:
     - comment
     - commerce_product
-    - commerce_stock_field
+    - field_formatter
     - fivestar
     - media
     - text
@@ -79,9 +79,11 @@ content:
     weight: 7
     region: content
   field_product_stock:
-    type: commerce_stock_level_simple
+    type: field_link
     label: above
-    settings: {  }
+    settings:
+      type: commerce_stock_level_simple
+      settings: {  }
     third_party_settings: {  }
     weight: 3
     region: content
