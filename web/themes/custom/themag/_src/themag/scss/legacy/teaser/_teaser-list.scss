@@ -136,10 +136,13 @@
 // Teaser Block 3 Col Attachment
 // ------------------------------
 .block__content > div > .teaser--block-2col {
-  .contextual {
-    display: none;
+  & {
+    @include make-row(); // ✅ Wrapped in `& {}`
+
+    .contextual {
+      display: none;
+    }
   }
-  @include make-row();
   > div {
     @include make-col-ready();
     @include make-col(12);
@@ -160,10 +163,11 @@
 // Teaser Block 3 Col Attachment
 // ------------------------------
 .block__content > div > .teaser--block-3col {
+  @include make-row();
   .contextual {
     display: none;
   }
-  @include make-row();
+
   > div {
     @include make-col-ready();
     @include make-col(12);

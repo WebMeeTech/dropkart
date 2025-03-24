@@ -33,10 +33,12 @@ $shariff-service: (
 .shariff[data-css="complete"] {
   ul {
     @include list__reset;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: none;
-    flex: inherit;
+    & {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: none;
+      flex: inherit;
+    }
     li {
       flex: 1;
       margin: 0 .2778rem 0;

@@ -1,11 +1,10 @@
-// Variables
 @import "variables";
-
-// Bootstrap components
+@import "mixins";
+@import "bootstrap-overrides";
 @import "bootstrap";
 
 // Mixins
-@import "mixins";
+
 
 // Base
 @import "base/basis";

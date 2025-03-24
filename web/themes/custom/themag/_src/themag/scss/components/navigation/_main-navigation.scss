@@ -3,7 +3,9 @@
 .block--region-header-primary-menu  {
   > ul.menu {
     @include list__reset;
-    display: flex;
+    & {
+      display: flex;
+    }
     > li > a {
       padding: 15px;
       border-radius: .25rem;

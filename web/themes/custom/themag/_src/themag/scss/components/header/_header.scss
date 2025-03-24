@@ -25,7 +25,10 @@
   }
 
   &__container--boxed {
-    @include make-container-max-widths();
+    .container {
+      max-width: 100%; // ✅ Replace deprecated mixin
+    }
+
   }
 
   &__main {
@@ -133,7 +136,9 @@ a.cart-block--link__expand {
 
   ul.menu {
     @include list__reset;
-    min-width: 150px;
+    & {
+      min-width: 150px;
+    }
 
     li {
       display: block;

@@ -39,8 +39,10 @@ ul.pager__items {
 // ------------------------
 .pager--load-more {
   @include list__reset;
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid $theme-gray-lightest;
-  text-align: center;
+  & {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid $theme-gray-lightest;
+    text-align: center;
+  }
 }

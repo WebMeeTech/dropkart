@@ -7,10 +7,12 @@
 
 ul.quicktabs-tabs {
   @include list__reset;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid $theme-gray-lighter;
-  margin-bottom: 1.5rem;
+  & {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $theme-gray-lighter;
+    margin-bottom: 1.5rem;
+  }
   @include media-breakpoint-up(lg) {
     justify-content: start;
   }

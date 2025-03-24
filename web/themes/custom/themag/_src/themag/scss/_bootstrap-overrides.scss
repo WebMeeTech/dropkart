@@ -1,0 +1,7 @@
+@use "sass:math";
+
+// Example usage
+$dividend: 100%;
+$fixed-value: math.abs($dividend);
+
+

@@ -14,7 +14,7 @@
 .navbar-we-mega-menu.navbar .center > .we-mega-menu-submenu {
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .navbar-we-mega-menu.navbar .right > .we-mega-menu-submenu {
   right: 0;
@@ -94,15 +94,15 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .navbar-we-mega-menu.navbar .we-mega-menu-ul > li.we-mega-menu-li[data-submenu="1"]:hover {
   background-color: rgba(255, 255, 255, 0.9);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   -webkit-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.2);
 }
 .navbar-we-mega-menu.navbar .we-mega-menu-ul > li.we-mega-menu-li[data-submenu="1"] > a:after,
 .navbar-we-mega-menu.navbar .we-mega-menu-ul > li.we-mega-menu-li[data-submenu="1"] > span:after {
@@ -121,7 +121,7 @@
   transition: all 0.1s ease;
   min-width: 170px;
   -webkit-box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
 }
 .we-mega-menu-submenu ul {
   margin: 0;
@@ -143,11 +143,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .we-mega-menu-submenu li.we-mega-menu-li[data-submenu="1"] > a:after,
 .we-mega-menu-submenu li.we-mega-menu-li[data-submenu="1"] > span:after {
@@ -164,7 +164,7 @@
   margin: 0;
   min-width: 170px;
   -webkit-box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2);
 }
 .we-mega-menu-submenu li.we-mega-menu-li .we-mega-menu-submenu .dropdown-menu {
   min-width: initial;
@@ -173,4 +173,4 @@
 .type-of-block {
   padding: 1rem;
 }
-/*# sourceMappingURL=../../sourcemap/components/modules/we-megamenu.css.map */
+/*# sourceMappingURL=we-megamenu.css.map */

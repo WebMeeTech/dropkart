@@ -82,8 +82,11 @@
 .featured--a {
   .view-content {
     @include clearfix;
-    overflow: auto;
-    white-space: nowrap;
+    & {
+      overflow: auto;
+      white-space: nowrap;
+    }
+
     @include media-breakpoint-up(xl) {
       overflow: visible;
     }
@@ -155,7 +158,9 @@
   }
   .attachment-after,
   .attachment-before {
-    flex: 0 0 100%;
+    & {
+      flex: 0 0 100%;
+    }
     @include media-breakpoint-up(lg) {
       flex: 0 0 50%;
     }

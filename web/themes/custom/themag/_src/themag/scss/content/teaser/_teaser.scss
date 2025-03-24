@@ -156,7 +156,9 @@
     font-size: .7778rem;
     ul {
       @include list__reset;
-      display: flex;
+      & {
+        display: flex;
+      }
       li:not(:first-child) {
         margin-left: .7778rem;
       }
